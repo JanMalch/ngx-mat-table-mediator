@@ -5,7 +5,7 @@ import { promisify } from 'util';
 const readFile = promisify(fs.readFile);
 const writeFile = promisify(fs.writeFile);
 
-function getPackage(path: string): Promise<{ version: string; [key: string]: any }> {
+export function getPackage(path: string): Promise<{ version: string; [key: string]: any }> {
   return readFile(path, {
     encoding: 'utf-8'
   }).then(JSON.parse);

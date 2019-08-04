@@ -32,7 +32,8 @@
   },
   "standard-version": {
     "scripts": {
-      "postbump": "tsnode ./tools/copy-package-version"
+      "postbump": "ts-node ./tools/copy-package-version",
+      "postcommit": "ts-node ./tools/amend-version-bump"
     }
   },
   "private": true,
