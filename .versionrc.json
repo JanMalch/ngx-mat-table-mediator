@@ -9,6 +9,7 @@
     {"type": "style", "hidden": true},
     {"type": "refactor", "section":  "Code Refactoring"},
     {"type": "perf", "section": "Performance Improvements"},
-    {"type": "test", "hidden": true}
+    {"type": "test", "hidden": true},
+    {"type":  "build", "hidden":  true}
   ]
 }
