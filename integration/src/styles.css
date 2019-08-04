@@ -1,0 +1,56 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 32px;
+  box-sizing: border-box;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex.align-center {
+  align-items: center;
+}
+
+.flex > .spacer {
+  flex: 1;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.mr-16 {
+  margin-right: 16px;
+}
+
+.ml-16 {
+  margin-left: 16px;
+}
+
+.mat-tab-body-content {
+  display: flex;
+  padding: 0 0 32px;
+  box-sizing: border-box;
+}
+
+.mat-tab-body-content > *:first-child {
+  width: calc((100vw - 900px) / 2);
+  padding: 32px;
+  box-sizing: border-box;
+  margin-right: 32px;
+  border-right: 1px solid gainsboro;
+}
+
+.mat-tab-body-content > *:nth-child(2) {
+  width: 900px;
+  max-width: 95vw;
+  padding: 32px 16px;
+}

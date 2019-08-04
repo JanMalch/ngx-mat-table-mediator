@@ -1,0 +1,168 @@
+<header class="flex align-center">
+  <h1 class="m-0 mr-16">ngx-mat-table-mediator</h1>
+  <a href="https://janmalch.github.io/ngx-mat-table-mediator" class="ml-16">
+    <img alt="Docs" src="https://img.shields.io/badge/docs-available-blue" />
+  </a>
+  <a href="https://www.npmjs.com/package/ngx-mat-table-mediator" class="ml-16">
+    <img alt="npm" src="https://img.shields.io/npm/v/ngx-mat-table-mediator" />
+  </a>
+  <a href="https://travis-ci.org/JanMalch/ngx-mat-table-mediator" class="ml-16">
+    <img
+      alt="Travis-CI"
+      src="https://travis-ci.org/JanMalch/ngx-mat-table-mediator.svg?branch=master"
+    />
+  </a>
+  <a href="https://codecov.io/gh/JanMalch/ngx-mat-table-mediator" class="ml-16">
+    <img
+      alt="Codecov"
+      src="https://codecov.io/gh/JanMalch/ngx-mat-table-mediator/branch/master/graph/badge.svg"
+    />
+  </a>
+  <a href="https://github.com/JanMalch/ngx-mat-table-mediator" class="ml-16">
+    <img alt="GitHub" src="https://img.shields.io/badge/source-GitHub-blue" />
+  </a>
+</header>
+
+<mat-tab-group>
+  <mat-tab label="Minimal">
+    <ng-template matTabContent>
+      <aside>
+        <a
+          [href]="prefix + 'minimal/minimal.component.ts'"
+          target="_blank"
+          mat-stroked-button
+          color="primary"
+          >Source</a
+        >
+        <p>Simple Usage:</p>
+        <ol>
+          <li>Choose a given template</li>
+          <li>Define Mediator-Class</li>
+          <li>Define data source, via fetch method</li>
+        </ol>
+        <p>
+          Please notice that new mock data will be generated every time. This example uses a
+          very simple way of mocking.
+        </p>
+      </aside>
+      <app-minimal></app-minimal>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Custom Mediator">
+    <ng-template matTabContent>
+      <aside>
+        <a
+          [href]="prefix + 'custom/custom.component.ts'"
+          target="_blank"
+          mat-stroked-button
+          color="primary"
+          >Source</a
+        >
+        <p>
+          Custom Mediator implementation and HTML template. Click the <b>Trigger</b> button to
+          generate new local data.
+        </p>
+      </aside>
+      <app-custom></app-custom>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="@angular/material's GitHub fetch">
+    <ng-template matTabContent>
+      <aside>
+        <a
+          [href]="prefix + 'github-fetch/github-fetch.component.ts'"
+          target="_blank"
+          mat-stroked-button
+          color="primary"
+          >Source</a
+        >
+        <p>
+          Mediator fetching data from an HTTP call. Replicates the official
+          <a href="https://material.angular.io/components/table/examples" target="_blank">
+            <b>Table retrieving data through HTTP</b></a
+          >
+          example.
+        </p>
+        <p>Fetching will wait until you click the button for the first time.</p>
+        <p>A snackbar will appear on success and stay until you leave or search again.</p>
+        <p>Please note that the GitHub-API is responsible for sorting.</p>
+      </aside>
+      <app-github-fetch></app-github-fetch>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="@angular/material's GitHub fetch v2">
+    <ng-template matTabContent>
+      <aside>
+        <a
+          [href]="prefix + 'github-fetch-immediate/github-fetch-immediate.component.ts'"
+          target="_blank"
+          mat-stroked-button
+          color="primary"
+          >Source</a
+        >
+        <p>
+          Mediator fetching data from an HTTP call. Replicates the official
+          <a href="https://material.angular.io/components/table/examples" target="_blank">
+            <b>Table retrieving data through HTTP</b></a
+          >
+          example.
+        </p>
+        <p>Fetching starts instantly and every time you click the button.</p>
+        <p>Please note that the GitHub-API is responsible for sorting.</p>
+      </aside>
+      <app-github-fetch-immediate></app-github-fetch-immediate>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Custom Config">
+    <ng-template matTabContent>
+      <aside>
+        <a
+          [href]="prefix + 'custom-config/custom-config.component.ts'"
+          target="_blank"
+          mat-stroked-button
+          color="primary"
+          >Source</a
+        >
+        <p>
+          Overwrites the mediator config in a mediated component. It implements automatic
+          retries (see console).
+        </p>
+      </aside>
+      <app-custom-config></app-custom-config>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Query in fetch">
+    <ng-template matTabContent>
+      <aside>
+        <a
+          [href]="prefix + 'json-placeholder/json-placeholder.component.ts'"
+          target="_blank"
+          mat-stroked-button
+          color="primary"
+          >Source</a
+        >
+        <p>Shows how you can add a query string to the HTTP request.</p>
+      </aside>
+      <app-json-placeholder></app-json-placeholder>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Query (type-ahead + interval)">
+    <ng-template matTabContent>
+      <aside>
+        <a
+          [href]="prefix + 'json-placeholder-typing/json-placeholder-typing.component.ts'"
+          target="_blank"
+          mat-stroked-button
+          color="primary"
+          >Source</a
+        >
+        <p>Shows how you can add a query string to the HTTP request.</p>
+        <p>
+          It will automatically search and no button is needed. It will also refresh
+          <b>every 10 seconds!</b>
+        </p>
+      </aside>
+      <app-json-placeholder-typing></app-json-placeholder-typing>
+    </ng-template>
+  </mat-tab>
+</mat-tab-group>

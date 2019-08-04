@@ -1,0 +1,50 @@
+<button
+  mat-stroked-button
+  color="primary"
+  [disabled]="isLoading$ | async"
+  (click)="trigger$.next(undefined)"
+>
+  Search now
+</button>
+
+<div class="example-container mat-elevation-z8">
+  <div
+    class="example-loading-shade"
+    *ngIf="(isLoading$ | async) || (isRateLimitReached$ | async)"
+  >
+    <mat-spinner *ngIf="isLoading$ | async"></mat-spinner>
+    <div class="example-rate-limit-reached" *ngIf="isRateLimitReached$ | async">
+      GitHub's API rate limit has been reached. It will be reset in one minute.
+    </div>
+  </div>
+
+  <div class="example-table-container">
+    <!-- notice you dont have to add the dataSource -->
+    <table
+      mat-table
+      class="example-table"
+      matSort
+      matSortActive="created"
+      matSortDisableClear
+      matSortDirection="asc"
+    >
+      <!-- Number Column -->
+      <ng-container *ngFor="let col of columnLabels | keyvalue" [matColumnDef]="col.key">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>{{ col.value }}</th>
+        <td mat-cell *matCellDef="let row">
+          <ng-container *ngIf="col.key === 'created_at'; else noDate">
+            {{ row[col.key] | date }}
+          </ng-container>
+          <ng-template #noDate>
+            {{ row[col.key] }}
+          </ng-template>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="columns"></tr>
+      <tr mat-row *matRowDef="let row; columns: columns"></tr>
+    </table>
+  </div>
+  <!-- GitHub doesn't provide pageSize options -->
+  <mat-paginator [pageSizeOptions]="[30]" [pageSize]="30"></mat-paginator>
+</div>

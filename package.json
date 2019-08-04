@@ -1,46 +1,94 @@
 {
   "name": "ngx-mat-table-mediator",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "description": "Library to simplify Angular's mat-table usage",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
+    "serve": "ng serve integration",
+    "build": "ng build ngx-mat-table-mediator && npm run readme",
+    "build:integration": "ng build integration --prod --base-href=/ngx-mat-table-mediator-demo",
+    "build:ci": "npm run build && npm run build:integration",
+    "test": "ng test ngx-mat-table-mediator --watch=false --browsers=ChromeHeadless",
+    "test:integration": "ng test integration --watch=false --browsers=ChromeHeadless",
+    "test:ci": "npm run test & npm run test:integration",
+    "format": "prettier --write \"{src,integration}/**/*.{ts,js,html,css}\"",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "release": "standard-version",
+    "readme": "ts-node ./tools/copy-readme",
+    "docs": "typedoc src/lib/ --out docs",
+    "ci": "npm run lint && npm run test:ci && npm run build:ci && npm run docs"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JanMalch/ngx-mat-table-mediator.git"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/JanMalch/ngx-mat-table-mediator#readme",
+  "bugs": {
+    "url": "https://github.com/JanMalch/ngx-mat-table-mediator/issues"
+  },
+  "standard-version": {
+    "scripts": {
+      "postbump": "tsnode ./tools/copy-package-version"
+    }
   },
   "private": true,
+  "keywords": [
+    "ng",
+    "Angular",
+    "table",
+    "Material",
+    "@angular/material"
+  ],
   "dependencies": {
-    "@angular/animations": "~8.0.1",
-    "@angular/common": "~8.0.1",
-    "@angular/compiler": "~8.0.1",
-    "@angular/core": "~8.0.1",
-    "@angular/forms": "~8.0.1",
-    "@angular/platform-browser": "~8.0.1",
-    "@angular/platform-browser-dynamic": "~8.0.1",
-    "@angular/router": "~8.0.1",
+    "@angular/animations": "~7.2.7",
+    "@angular/cdk": "~7.3.7",
+    "@angular/common": "~7.2.7",
+    "@angular/compiler": "~7.2.7",
+    "@angular/core": "~7.2.7",
+    "@angular/forms": "~7.2.7",
+    "@angular/material": "^7.3.7",
+    "@angular/platform-browser": "~7.2.7",
+    "@angular/platform-browser-dynamic": "~7.2.7",
+    "@angular/router": "~7.2.7",
+    "hammerjs": "^2.0.8",
     "rxjs": "~6.4.0",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
-    "@angular/cli": "~8.0.3",
-    "@angular/compiler-cli": "~8.0.1",
-    "@angular/language-service": "~8.0.1",
-    "@types/node": "~8.9.4",
+    "@angular-devkit/build-angular": "~0.13.4",
+    "@angular-devkit/build-ng-packagr": "~0.13.4",
+    "@angular/cli": "~7.0.3",
+    "@angular/compiler-cli": "~7.2.7",
+    "@angular/language-service": "~7.2.7",
+    "@commitlint/config-conventional": "^8.1.0",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~8.9.4",
     "codelyzer": "^5.0.0",
+    "commitlint": "^8.1.0",
+    "husky": "^3.0.2",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.1.0",
     "karma-chrome-launcher": "~2.2.0",
+    "karma-coverage": "^1.1.2",
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.0",
+    "lint-staged": "^9.2.1",
+    "ng-packagr": "^5.1.0",
+    "prettier": "^1.18.2",
     "protractor": "~5.4.0",
-    "ts-node": "~7.0.0",
+    "standard-version": "^7.0.0",
+    "ts-node": "^7.0.1",
+    "tsickle": "^0.35.0",
     "tslint": "~5.15.0",
-    "typescript": "~3.4.3"
+    "typedoc": "^0.15.0",
+    "typescript": "^3.1.6"
   }
 }

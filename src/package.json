@@ -1,0 +1,27 @@
+{
+  "name": "ngx-mat-table-mediator",
+  "version": "0.0.0",
+  "description": "Library to simplify Angular's mat-table usage",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JanMalch/ngx-mat-table-mediator.git"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/JanMalch/ngx-mat-table-mediator#readme",
+  "bugs": {
+    "url": "https://github.com/JanMalch/ngx-mat-table-mediator/issues"
+  },
+  "keywords": [
+    "ng",
+    "Angular",
+    "table",
+    "Material",
+    "@angular/material"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^7.2.0",
+    "@angular/core": "^7.2.0",
+    "@angular/cdk": "~7.3.7",
+    "@angular/material": "^7.3.7"
+  }
+}
