@@ -134,24 +134,11 @@
           "options": {
             "tsConfig": [
               "integration/tsconfig.app.json",
-              "integration/tsconfig.spec.json",
-              "integration/e2e/tsconfig.json"
+              "integration/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
             ]
-          }
-        },
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "integration/e2e/protractor.conf.js",
-            "devServerTarget": "integration:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "integration:serve:production"
-            }
           }
         }
       }
