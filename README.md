@@ -1,13 +1,12 @@
-<p align="center">  
-  <b>ngx-mat-table-mediator</b> <i>- Simplify Angular Material's <code>mat-table</code>.</i>  
-</p>  
-  
-<p align="center">  
-  <a href="https://janmalch.github.io/ngx-mat-table-mediator/index.html"><img src="https://img.shields.io/badge/docs-available-blue" alt="docs"></a>  
-  <a href="https://badge.fury.io/js/ngx-mat-table-mediator"><img src="https://badge.fury.io/js/ngx-mat-table-mediator.svg" alt="npm version"></a>  
-  <a href="https://travis-ci.org/JanMalch/ngx-mat-table-mediator"><img src="https://travis-ci.org/JanMalch/ngx-mat-table-mediator.svg?branch=master" alt="Build Status"></a>  
-  <a href="https://codecov.io/gh/JanMalch/ngx-mat-table-mediator"><img src="https://codecov.io/gh/JanMalch/ngx-mat-table-mediator/branch/master/graph/badge.svg" alt="codecov"></a>  
-</p>  
+# ngx-mat-table-mediator <a href="https://material.angular.io/components/table/overview"><img src="https://angular.io/generated/images/marketing/concept-icons/material.svg" width="90" height="90" align="right"></a>
+
+[![Docs](https://img.shields.io/badge/docs-available-blue)][docs-url]
+[![npm](https://badge.fury.io/js/ngx-mat-table-mediator.svg)][npm-url]
+[![Travis-CI](https://travis-ci.org/JanMalch/ngx-mat-table-mediator.svg?branch=master)][build-url]
+[![codecov](https://codecov.io/gh/JanMalch/ngx-mat-table-mediator/branch/master/graph/badge.svg)][codecov-url]
+
+<i>Simplify Angular Material's <code>mat-table</code>.</i>  
+
 
 ## Installation & Usage  
   
@@ -19,7 +18,7 @@ The library also provides an `abstract class MediatedTableComponent<F, O>`.
   
 >The generic type `<F>` always describes the type of the fetch input-payload, for example a form output . The generic type `<O>` always describes the type of the fetch output  
   
-You can read the detailed docs [here](https://janmalch.github.io/ngx-mat-table-mediator/index.html).  Extensive examples are provided in the [integration](https://github.com/JanMalch/ngx-mat-table-mediator/tree/master/integration/src/app) directory and can be seen in action in the [demo](https://janmalch.github.io/ngx-mat-table-mediator-demo). 
+You can read the detailed docs [here](https://janmalch.github.io/ngx-mat-table-mediator/index.html).  Extensive examples are provided in the [integration](https://github.com/JanMalch/ngx-mat-table-mediator/tree/master/integration/src/app) directory and can be seen in action in the [demo](https://janmalch.github.io/ngx-mat-table-mediator-demo). **A minimal component with a table, pagniator and sorting is shown [below](#define-behaviour-1).**
   
   
 ## `abstract class MatTableMediator<F, O>`  
@@ -77,14 +76,14 @@ The [`MediatedTableComponent`](https://janmalch.github.io/ngx-mat-table-mediator
 Additionally you have access to
 - `isLoading$` observable, that connects to the mediator, when available
 - `mediatorConfig` to configure the mediator
-- `trigger$` to overwrite the trigger for fetching (defaults to `of(undefined)`)
+- `trigger$` to overwrite the trigger for fetching, defaults to `of(undefined)`
   
 ### Define behaviour  
   
 ```typescript  
 @Component({
   selector: 'app-minimal',
-  template: MTM_TABLE_SORT_PAGINATOR_TMPL,
+  template: MTM_TABLE_SORT_PAGINATOR_TMPL, // template with table, sort and paginator
   styleUrls: ['./minimal.component.css'],
   encapsulation: ViewEncapsulation.None
 })
@@ -92,7 +91,7 @@ export class MinimalComponent extends MediatedTableComponent<void, Person>
   implements AfterViewInit, OnDestroy {
   columns: Columns<Person> = ['name', 'age'];
 
-  constructor() {
+  constructor(private http: HttpClient) {
     super(SimpleTableMediator);
   }
 
@@ -103,7 +102,7 @@ export class MinimalComponent extends MediatedTableComponent<void, Person>
     pageIndex?: number,
     pageSize?: number
   ): Observable<MediatorData<Person>> {
-    // return your observable here
+    return this.http.get<MediatorData<Person>>(`/persons?page=${pageIndex}&size=${pageSize}`);
   }
 }
 ```  
@@ -112,3 +111,9 @@ export class MinimalComponent extends MediatedTableComponent<void, Person>
   
 - [Minimal Example](https://github.com/JanMalch/ngx-mat-table-mediator/blob/master/integration/src/app/minimal/minimal.component.ts)  
 - [Fetching via HTTP](https://github.com/JanMalch/ngx-mat-table-mediator/blob/master/integration/src/app/github-fetch/github-fetch.component.ts)
+
+
+[docs-url]: https://janmalch.github.io/ngx-mat-table-mediator/index.html
+[npm-url]: https://www.npmjs.com/package/ngx-mat-table-mediator
+[build-url]: https://travis-ci.org/JanMalch/ngx-mat-table-mediator
+[codecov-url]:https://codecov.io/gh/JanMalch/ngx-mat-table-mediator
