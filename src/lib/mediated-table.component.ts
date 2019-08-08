@@ -2,7 +2,7 @@ import { AfterViewInit, OnDestroy, ViewChild } from '@angular/core';
 import { MatPaginator, MatSort, MatTable, SortDirection } from '@angular/material';
 import { Observable, of } from 'rxjs';
 import { MatTableMediator } from './mat-table.mediator';
-import { MediatorConfig, MediatorData, Newable, TriggerPayload } from './models';
+import { Columns, MediatorConfig, MediatorData, Newable, TriggerPayload } from './models';
 
 /**
  * This component reduces all boilerplate code to the absolut minimum:
@@ -49,9 +49,10 @@ export abstract class MediatedTableComponent<F, O> implements AfterViewInit, OnD
   trigger$: TriggerPayload<F> = of(undefined);
 
   /**
-   * array of column ids
+   * array of column ids. Has to match the keys of your data interface
+   * @typeparam O type of table data
    */
-  abstract columns: string[];
+  abstract columns: Columns<O>;
 
   /**
    * The `initialIsLoading` param sets the initial value for isLoading$.

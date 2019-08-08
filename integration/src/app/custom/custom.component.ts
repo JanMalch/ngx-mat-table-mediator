@@ -1,6 +1,11 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatPaginator, MatSort, MatTable, SortDirection } from '@angular/material';
-import { MatTableMediator, MediatorData, TriggerPayload } from 'ngx-mat-table-mediator';
+import {
+  Columns,
+  MatTableMediator,
+  MediatorData,
+  TriggerPayload
+} from 'ngx-mat-table-mediator';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 import { mockPersonData, Person } from '../models';
 
@@ -35,8 +40,8 @@ export class CustomComponent implements AfterViewInit {
 
   mediator: MatTableMediator<void, Person>;
 
-  columns = ['name', 'age'];
-  columnLabels = {
+  columns: Columns<Person> = ['name', 'age'];
+  columnLabels: { [column in keyof Person]: string } = {
     name: 'Name',
     age: 'Age'
   };

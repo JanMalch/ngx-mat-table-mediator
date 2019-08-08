@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { MatPaginator, MatSort, MatTable } from '@angular/material';
-import { ArrayTableMediator, MatTableMediator } from 'ngx-mat-table-mediator';
+import { ArrayTableMediator, Columns, MatTableMediator } from 'ngx-mat-table-mediator';
 import { combineLatest, fromEvent, interval, Observable, of } from 'rxjs';
 import { debounceTime, map, startWith, tap } from 'rxjs/operators';
 import { JsonPlaceholderComment } from '../models';
@@ -16,7 +16,7 @@ export class JsonPlaceholderTypingComponent implements AfterViewInit {
 
   mediator: MatTableMediator<string, JsonPlaceholderComment>;
 
-  columns = ['postId', 'id', 'name', 'email'];
+  columns: Columns<JsonPlaceholderComment> = ['postId', 'id', 'name', 'email'];
 
   isLoading$ = of(false);
 

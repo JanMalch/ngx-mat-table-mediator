@@ -2,13 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { AfterViewInit, Component, OnDestroy } from '@angular/core';
 import { MatSnackBar, SortDirection } from '@angular/material';
 import {
+  Columns,
   MediatedTableComponent,
   MediatorData,
   SimpleTableMediator
 } from 'ngx-mat-table-mediator';
 import { BehaviorSubject, Observable, ReplaySubject } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { GithubApi, GithubIssue } from '../models';
+import { GithubApi, GithubIssue, Person } from '../models';
 
 @Component({
   selector: 'app-github-fetch',
@@ -17,14 +18,14 @@ import { GithubApi, GithubIssue } from '../models';
 })
 export class GithubFetchComponent extends MediatedTableComponent<any, GithubIssue>
   implements AfterViewInit, OnDestroy {
-  columnLabels = {
+  columnLabels: { [column in keyof GithubIssue]: string } = {
     created_at: 'Created at',
     state: 'State',
     number: 'Number',
     title: 'Title'
   };
 
-  columns = Object.keys(this.columnLabels);
+  columns = Object.keys(this.columnLabels) as Columns<GithubIssue>;
   trigger$ = new ReplaySubject<any>(1); // loading starts after button click, use super(SimpleTableMediator, false);
 
   isRateLimitReached$ = new BehaviorSubject<boolean>(false);

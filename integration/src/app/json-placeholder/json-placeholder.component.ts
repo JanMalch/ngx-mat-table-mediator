@@ -1,17 +1,19 @@
 import { HttpClient } from '@angular/common/http';
 import { AfterViewInit, Component } from '@angular/core';
 import { SortDirection } from '@angular/material';
-import { ArrayTableMediator, MediatedTableComponent } from 'ngx-mat-table-mediator';
+import { ArrayTableMediator, Columns, MediatedTableComponent } from 'ngx-mat-table-mediator';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { JsonPlaceholderComment } from '../models';
 
 @Component({
   selector: 'app-json-placeholder',
   templateUrl: './json-placeholder.component.html',
   styleUrls: ['./json-placeholder.component.css']
 })
-export class JsonPlaceholderComponent extends MediatedTableComponent<string, Comment>
+export class JsonPlaceholderComponent
+  extends MediatedTableComponent<string, JsonPlaceholderComment>
   implements AfterViewInit {
-  columns = ['postId', 'id', 'name', 'email'];
+  columns: Columns<JsonPlaceholderComment> = ['postId', 'id', 'name', 'email'];
 
   trigger$ = new BehaviorSubject<string>('');
 

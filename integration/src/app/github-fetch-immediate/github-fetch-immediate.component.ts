@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { SortDirection } from '@angular/material';
 import {
+  Columns,
   MediatedTableComponent,
   MediatorData,
   SimpleTableMediator
@@ -17,14 +18,14 @@ import { GithubApi, GithubIssue } from '../models';
 })
 export class GithubFetchImmediateComponent extends MediatedTableComponent<any, GithubIssue>
   implements AfterViewInit {
-  columnLabels = {
+  columnLabels: { [column in keyof GithubIssue]: string } = {
     created_at: 'Created at',
     state: 'State',
     number: 'Number',
     title: 'Title'
   };
 
-  columns = Object.keys(this.columnLabels);
+  columns = Object.keys(this.columnLabels) as Columns<GithubIssue>;
   trigger$ = new BehaviorSubject<any>(undefined);
 
   isRateLimitReached$ = new BehaviorSubject<boolean>(false); // loading starts instantly, use super(SimpleTableMediator, true);

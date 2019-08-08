@@ -4,10 +4,9 @@ import { Observable } from 'rxjs';
 
 /**
  * type alias for an observable of F or undefined
- * F &rarr; type of the trigger payload, same <F> as the mediator's
  * @typeparam F type of the payload, same <F> as the mediator's
  */
-export type TriggerPayload<F> = Observable<F | undefined>;
+export type TriggerPayload<F> = Observable<F>;
 
 /**
  * A function alias that takes a payload, the current `sortBy` id, `sortDirection`,
@@ -44,7 +43,7 @@ export type ArrayFetchFunction<F, O> = FetchFunction<F, Array<O>>;
 /**
  * Interface for the transformed API output so the mediator can feed the data in the table and observables.
  * generic is the type of the array with the table data, same <O> as the mediator's and MatTable's
- * O &rarr; type of the array with the table data, same <O> as the mediator's
+ * @typeparam O type of the array with the table data, same <O> as the mediator's
  */
 export interface MediatorData<O> {
   total: number;
@@ -76,3 +75,9 @@ export interface MediatorConfig<T> {
  * alias for a type with a constructor
  */
 export type Newable<T> = new (...args: any[]) => T;
+
+/**
+ * alias for an array with keys of O
+ * @typeparam O type of the array with the table data, same <O> as the mediator's
+ */
+export type Columns<O> = Array<keyof O>;

@@ -10,7 +10,8 @@ import {
   MediatorConfig,
   MediatorData,
   SimpleTableMediator,
-  MTM_TABLE_TMPL
+  MTM_TABLE_TMPL,
+  Columns
 } from 'ngx-mat-table-mediator';
 import { Observable } from 'rxjs';
 import { mockPersonData, Person } from '../models';
@@ -43,7 +44,7 @@ export class MyDataService {
 })
 export class CustomConfigComponent extends MediatedTableComponent<void, Person>
   implements AfterViewInit, OnDestroy {
-  columns = ['name', 'age'];
+  columns: Columns<Person> = ['name', 'age'];
   mediatorConfig: Partial<MediatorConfig<Person>> = {
     debounceLoading: 0,
     attempts: 3

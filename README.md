@@ -82,18 +82,30 @@ Additionally you have access to
 ### Define behaviour  
   
 ```typescript  
-@Component({  
-  selector: 'app-minimal',  
-  template: TABLE_SORT_PAGINATOR_TMPL,  
-  styleUrls: ['./minimal.component.css'],  
-  encapsulation: ViewEncapsulation.None  
-})  
-export class MinimalComponent extends MediatedTableComponent<void, Person>  
- implements AfterViewInit, OnDestroy {  columns = ['name', 'age'];  
-  constructor() {  
- super(SimpleTableMediator); }  
-  fetch(  
- payload?: void, sortBy?: string, sortDirection?: 'asc' | 'desc' | '', pageIndex?: number, pageSize?: number ): Observable<MediatorData<Person>> { // return your observable here }}  
+@Component({
+  selector: 'app-minimal',
+  template: MTM_TABLE_SORT_PAGINATOR_TMPL,
+  styleUrls: ['./minimal.component.css'],
+  encapsulation: ViewEncapsulation.None
+})
+export class MinimalComponent extends MediatedTableComponent<void, Person>
+  implements AfterViewInit, OnDestroy {
+  columns: Columns<Person> = ['name', 'age'];
+
+  constructor() {
+    super(SimpleTableMediator);
+  }
+
+  fetch(
+    payload?: void,
+    sortBy?: string,
+    sortDirection?: 'asc' | 'desc' | '',
+    pageIndex?: number,
+    pageSize?: number
+  ): Observable<MediatorData<Person>> {
+    // return your observable here
+  }
+}
 ```  
   
 ### Example & Usage  

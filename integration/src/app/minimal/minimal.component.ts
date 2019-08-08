@@ -4,7 +4,8 @@ import {
   MediatorData,
   prepareMediatorData,
   SimpleTableMediator,
-  MTM_TABLE_SORT_PAGINATOR_TMPL
+  MTM_TABLE_SORT_PAGINATOR_TMPL,
+  Columns
 } from 'ngx-mat-table-mediator';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -18,7 +19,7 @@ import { mockPersonData, Person } from '../models';
 })
 export class MinimalComponent extends MediatedTableComponent<void, Person>
   implements AfterViewInit, OnDestroy {
-  columns = ['name', 'age'];
+  columns: Columns<Person> = ['name'];
 
   constructor() {
     super(SimpleTableMediator);
