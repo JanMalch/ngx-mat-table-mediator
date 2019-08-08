@@ -13,7 +13,7 @@
     "test:ci": "npm run test & npm run test:integration",
     "format": "prettier --write \"{src,integration}/**/*.{ts,js,html,css}\"",
     "lint": "ng lint",
-    "release": "standard-version",
+    "release": "standard-version --no-verify",
     "readme": "ts-node ./tools/copy-readme",
     "docs": "typedoc src/lib/ --out docs",
     "ci": "npm run lint && npm run test:ci && npm run build:ci && npm run docs"
