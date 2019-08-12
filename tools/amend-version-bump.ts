@@ -8,7 +8,7 @@ const exec = promisify(_exec);
 async function amendVersion() {
   const topLevelPath = join(__dirname, '../package.json');
   const { version } = await getPackage(topLevelPath);
-  return exec(`git src/package.json --amend -m "chore(release): ${version}"`);
+  return exec(`git commit --amend -m "chore(release): ${version}" -- src/package.json`);
 }
 
 amendVersion();
