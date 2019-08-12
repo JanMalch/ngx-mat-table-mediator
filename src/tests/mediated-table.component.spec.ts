@@ -3,6 +3,7 @@ import { async, TestBed } from '@angular/core/testing';
 import { MatPaginatorModule, MatSortModule, MatTableModule } from '@angular/material';
 import { Observable, of } from 'rxjs';
 import {
+  Columns,
   MediatedTableComponent,
   MediatorData,
   MTM_TABLE_SORT_PAGINATOR_TMPL,
@@ -15,7 +16,7 @@ import {
   styles: []
 })
 export class TestComponent extends MediatedTableComponent<void, { name: string }> {
-  columns = ['name'];
+  columns: Columns<{ name: string }> = ['name'];
 
   constructor() {
     super(SimpleTableMediator);
