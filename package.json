@@ -6,7 +6,7 @@
     "ng": "ng",
     "serve": "ng serve integration",
     "build": "ng build ngx-mat-table-mediator && npm run readme",
-    "build:integration": "ng build integration --prod --base-href=/ngx-mat-table-mediator-demo",
+    "build:integration": "ng build integration --prod --base-href=/ngx-mat-table-mediator-demo/",
     "build:ci": "npm run build && npm run build:integration",
     "test": "ng test ngx-mat-table-mediator --watch=false --browsers=ChromeHeadless",
     "test:integration": "ng test integration --watch=false --browsers=ChromeHeadless",
