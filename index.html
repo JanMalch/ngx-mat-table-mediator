@@ -1,0 +1,281 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ngx-mat-table-mediator</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.js" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">ngx-mat-table-mediator</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1> ngx-mat-table-mediator</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#ngx-mat-table-mediator-a-hrefhttpsmaterialangulariocomponentstableoverviewimg-srchttpsangulariogeneratedimagesmarketingconcept-iconsmaterialsvg-width90-height90-alignrighta" id="ngx-mat-table-mediator-a-hrefhttpsmaterialangulariocomponentstableoverviewimg-srchttpsangulariogeneratedimagesmarketingconcept-iconsmaterialsvg-width90-height90-alignrighta" style="color: inherit; text-decoration: none;">
+					<h1>ngx-mat-table-mediator <a href="https://material.angular.io/components/table/overview"><img src="https://angular.io/generated/images/marketing/concept-icons/material.svg" width="90" height="90" align="right"></a></h1>
+				</a>
+				<p><a href="https://janmalch.github.io/ngx-mat-table-mediator/index.html"><img src="https://img.shields.io/badge/docs-available-blue" alt="Docs"></a>
+					<a href="https://www.npmjs.com/package/ngx-mat-table-mediator"><img src="https://badge.fury.io/js/ngx-mat-table-mediator.svg" alt="npm"></a>
+					<a href="https://travis-ci.org/JanMalch/ngx-mat-table-mediator"><img src="https://travis-ci.org/JanMalch/ngx-mat-table-mediator.svg?branch=master" alt="Travis-CI"></a>
+				<a href="https://codecov.io/gh/JanMalch/ngx-mat-table-mediator"><img src="https://codecov.io/gh/JanMalch/ngx-mat-table-mediator/branch/master/graph/badge.svg" alt="codecov"></a></p>
+				<p><i>Simplify Angular Material&#39;s <code>mat-table</code>.</i>  </p>
+				<a href="#installation-amp-usage" id="installation-amp-usage" style="color: inherit; text-decoration: none;">
+					<h2>Installation &amp; Usage</h2>
+				</a>
+				<pre><code class="language-bash">npm i ngx-mat-table-mediator  </code></pre>
+				<p>At the core of this library is the <code>abstract class MatTableMediator&lt;F, O&gt;</code>. All functionality builds on top of it.<br>The library also provides an <code>abstract class MediatedTableComponent&lt;F, O&gt;</code>.  </p>
+				<blockquote>
+					<p>The generic type <code>&lt;F&gt;</code> always describes the type of the fetch input-payload, for example a form output . The generic type <code>&lt;O&gt;</code> always describes the type of the fetch output  </p>
+				</blockquote>
+				<p>You can read the detailed docs <a href="https://janmalch.github.io/ngx-mat-table-mediator/index.html">here</a>.  Extensive examples are provided in the <a href="https://github.com/JanMalch/ngx-mat-table-mediator/tree/master/integration/src/app">integration</a> directory and can be seen in action in the <a href="https://janmalch.github.io/ngx-mat-table-mediator-demo">demo</a>. <strong>A minimal component with a table, pagniator and sorting is shown <a href="#define-behaviour-1">below</a>.</strong></p>
+				<a href="#codeabstract-class-mattablemediatorltf-ogtcode" id="codeabstract-class-mattablemediatorltf-ogtcode" style="color: inherit; text-decoration: none;">
+					<h2><code>abstract class MatTableMediator&lt;F, O&gt;</code></h2>
+				</a>
+				<p>The class consists of a chain of methods, that you may hook into.<br>It also provides several observables to react to certain events.  </p>
+				<a href="#define-behaviour" id="define-behaviour" style="color: inherit; text-decoration: none;">
+					<h3>Define behaviour</h3>
+				</a>
+				<p>The <code>fetch</code> method is the only abstract method, that you have to implement.  </p>
+				<ul>
+					<li><a href="https://janmalch.github.io/ngx-mat-table-mediator/classes/_mat_table_mediator_.mattablemediator.html#fetch"><code>fetch</code></a> → defines how the data is fetched  </li>
+					<li><a href="https://janmalch.github.io/ngx-mat-table-mediator/classes/_mat_table_mediator_.mattablemediator.html#start"><code>start</code></a> → setups and subscribes to the data &amp; page-reset observable  </li>
+					<li><a href="https://janmalch.github.io/ngx-mat-table-mediator/classes/_mat_table_mediator_.mattablemediator.html#createdatafetch"><code>createDataFetch</code></a> → creates the observable that fetches the table data  </li>
+					<li><a href="https://janmalch.github.io/ngx-mat-table-mediator/classes/_mat_table_mediator_.mattablemediator.html#handleresult"><code>handleResult</code></a> → handles the result of the data fetch observable  </li>
+					<li><a href="https://janmalch.github.io/ngx-mat-table-mediator/classes/_mat_table_mediator_.mattablemediator.html#handlerrror"><code>handleError</code></a> → handles any errors occurring in the data fetch observable  </li>
+					<li><a href="https://janmalch.github.io/ngx-mat-table-mediator/classes/_mat_table_mediator_.mattablemediator.html#createonpagereset"><code>createOnPageReset</code></a> → creates the observable that indicates a page reset  </li>
+					<li><a href="https://janmalch.github.io/ngx-mat-table-mediator/classes/_mat_table_mediator_.mattablemediator.html#handlepagereset"><code>handlePageReset</code></a> → handles the page-reset observable  </li>
+				</ul>
+				<a href="#events" id="events" style="color: inherit; text-decoration: none;">
+					<h3>Events</h3>
+				</a>
+				<ul>
+					<li><a href="https://janmalch.github.io/ngx-mat-table-mediator/classes/_mat_table_mediator_.mattablemediator.html#data_"><code>data$: Observable&lt;Array&lt;O&gt;&gt;</code></a> → the data for the table. <strong>You do not have to connect the table with this observable!</strong>  </li>
+					<li><a href="https://janmalch.github.io/ngx-mat-table-mediator/classes/_mat_table_mediator_.mattablemediator.html#error_"><code>error$: Observable&lt;Error&gt;</code></a> → any errors occurring while fetching. Note that the mediator will still work  </li>
+					<li><a href="https://janmalch.github.io/ngx-mat-table-mediator/classes/_mat_table_mediator_.mattablemediator.html#isloading_"><code>isLoading$: Observable&lt;boolean&gt;</code></a> → indicates loading  </li>
+					<li><a href="https://janmalch.github.io/ngx-mat-table-mediator/classes/_mat_table_mediator_.mattablemediator.html#totalresults_"><code>totalResults$: Observable&lt;number&gt;</code></a> → total count of results that are available on the server  </li>
+					<li><a href="https://janmalch.github.io/ngx-mat-table-mediator/classes/_mat_table_mediator_.mattablemediator.html#onpagereset_"><code>onPageReset$: Observable&lt;[EventEmitter&lt;Sort&gt;, F] | any&gt;</code></a> → emits when ever the page should be reset   </li>
+					<li><a href="https://janmalch.github.io/ngx-mat-table-mediator/classes/_mat_table_mediator_.mattablemediator.html#onresultsfound_"><code>onResultsFound$: Observable&lt;number&gt;</code></a> → only emits if results were found (x &gt; 0)  </li>
+					<li><a href="https://janmalch.github.io/ngx-mat-table-mediator/classes/_mat_table_mediator_.mattablemediator.html#onnoresultsfound_"><code>onNoResultsFound$: Observable&lt;void&gt;</code></a> → only emits if no results were found (x &lt;= 0)  </li>
+					<li><a href="https://janmalch.github.io/ngx-mat-table-mediator/classes/_mat_table_mediator_.mattablemediator.html#onfetchbegin_"><code>onFetchBegin$: Observable&lt;void&gt;</code></a> → only emits if loading has started. You might use this to hide previous errors  </li>
+				</ul>
+				<a href="#example-amp-usage" id="example-amp-usage" style="color: inherit; text-decoration: none;">
+					<h3>Example &amp; Usage</h3>
+				</a>
+				<p>The library has two basic implementations:  </p>
+				<ul>
+					<li><a href="https://janmalch.github.io/ngx-mat-table-mediator/classes/_mediators_simple_mediator_.simpletablemediator.html"><code>SimpleTableMediator</code></a>: takes the <code>fetch</code> function as a <code>constructor</code> argument  </li>
+					<li><a href="https://janmalch.github.io/ngx-mat-table-mediator/classes/_mediators_array_mediator_.arraytablemediator.html"><code>ArrayTableMediator</code></a>: takes the <code>fetch</code> function as a <code>constructor</code> argument and calls <a href="https://janmalch.github.io/ngx-mat-table-mediator/modules/_mediators_array_mediator_.html#preparemediatordata"><code>prepareMediatorData</code></a> on it  </li>
+				</ul>
+				<p>You can see the classes used here:  </p>
+				<ul>
+					<li><a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/master/integration/src/app/custom/custom.component.ts">Custom Mediator</a>  </li>
+					<li><a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/master/integration/src/app/json-placeholder-typing/json-placeholder-typing.component.ts">ArrayTableMediator with query</a>  </li>
+				</ul>
+				<a href="#codeabstract-class-mediatedtablecomponentltf-ogtcode" id="codeabstract-class-mediatedtablecomponentltf-ogtcode" style="color: inherit; text-decoration: none;">
+					<h2><code>abstract class MediatedTableComponent&lt;F, O&gt;</code></h2>
+				</a>
+				<p>The components still require some boilerplate code like querying the elements with <code>@ViewChild</code>.  </p>
+				<p>The <code>MediatedTableComponent</code> reduces the code even further, to just a few lines.<br>The absolute minimum consists of  </p>
+				<ul>
+					<li>defining the columns: <code>columns = [&#39;name&#39;, &#39;age&#39;];</code>  </li>
+					<li>defining the used mediator class: <code>constructor() { super(SimpleTableMediator); }</code>  </li>
+					<li>implementing the <code>fetch</code> function: <code>return this.http.get(&#39;my-endpoint&#39;);</code>  </li>
+				</ul>
+				<p>The library also provides some <a href="https://janmalch.github.io/ngx-mat-table-mediator/modules/_templates_.html">templates</a> for your components.  </p>
+				<p>The <a href="https://janmalch.github.io/ngx-mat-table-mediator/classes/_mediated_table_component_.mediatedtablecomponent.html"><code>MediatedTableComponent</code></a> exposes the <code>mediator</code> instance, so you can also react to the events mentioned above.
+				Additionally you have access to</p>
+				<ul>
+					<li><code>isLoading$</code> observable, that connects to the mediator, when available</li>
+					<li><code>mediatorConfig</code> to configure the mediator</li>
+					<li><code>trigger$</code> to overwrite the trigger for fetching, defaults to <code>of(undefined)</code></li>
+				</ul>
+				<a href="#define-behaviour-1" id="define-behaviour-1" style="color: inherit; text-decoration: none;">
+					<h3>Define behaviour</h3>
+				</a>
+				<pre><code class="language-typescript"><span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'app-minimal'</span>,
+  template: MTM_TABLE_SORT_PAGINATOR_TMPL, <span class="hljs-comment">// template with table, sort and paginator</span>
+  styleUrls: [<span class="hljs-string">'./minimal.component.css'</span>],
+  encapsulation: ViewEncapsulation.None
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MinimalComponent <span class="hljs-keyword">extends</span> MediatedTableComponent&lt;<span class="hljs-built_in">void</span>, Person&gt;
+  <span class="hljs-keyword">implements</span> AfterViewInit, OnDestroy {
+  columns: Columns&lt;Person&gt; = [<span class="hljs-string">'name'</span>, <span class="hljs-string">'age'</span>];
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> http: HttpClient</span>) {
+    <span class="hljs-keyword">super</span>(SimpleTableMediator);
+  }
+
+  fetch(
+    payload?: <span class="hljs-built_in">void</span>,
+    sortBy?: <span class="hljs-built_in">string</span>,
+    sortDirection?: <span class="hljs-string">'asc'</span> | <span class="hljs-string">'desc'</span> | <span class="hljs-string">''</span>,
+    pageIndex?: <span class="hljs-built_in">number</span>,
+    pageSize?: <span class="hljs-built_in">number</span>
+  ): Observable&lt;MediatorData&lt;Person&gt;&gt; {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.http.get&lt;MediatorData&lt;Person&gt;&gt;(<span class="hljs-string">`/persons?page=<span class="hljs-subst">${pageIndex}</span>&amp;size=<span class="hljs-subst">${pageSize}</span>`</span>);
+  }
+}</code></pre>
+				<a href="#example-amp-usage-1" id="example-amp-usage-1" style="color: inherit; text-decoration: none;">
+					<h3>Example &amp; Usage</h3>
+				</a>
+				<ul>
+					<li><a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/master/integration/src/app/minimal/minimal.component.ts">Minimal Example</a>  </li>
+					<li><a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/master/integration/src/app/github-fetch/github-fetch.component.ts">Fetching via HTTP</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_mat_table_mediator_.html">"mat-<wbr>table.mediator"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_mediated_table_component_.html">"mediated-<wbr>table.component"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_mediators_array_mediator_.html">"mediators/array.mediator"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_mediators_simple_mediator_.html">"mediators/simple.mediator"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_models_.html">"models"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_templates_.html">"templates"</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

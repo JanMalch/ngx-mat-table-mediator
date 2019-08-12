@@ -1,0 +1,1338 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ArrayTableMediator | ngx-mat-table-mediator</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">ngx-mat-table-mediator</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="../modules/_mediators_array_mediator_.html">&quot;mediators/array.mediator&quot;</a>
+				</li>
+				<li>
+					<a href="_mediators_array_mediator_.arraytablemediator.html">ArrayTableMediator</a>
+				</li>
+			</ul>
+			<h1>Class ArrayTableMediator&lt;F, O&gt;</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>A simple implementation of <code>MatTableMediator</code> that takes the <code>fetch</code> function as an <code>constructor</code> argument.
+							Any calls to the <code>fetch</code> method of this class, will be forwarded to the specified function from the <code>constructor</code>.
+						The result will be transformed via the <code>prepareMediatorData</code> function.</p>
+					</div>
+					<dl class="tsd-comment-tags">
+						<dt>see</dt>
+						<dd><p><a href="../modules/_mediators_array_mediator_.html#preparemediatordata">prepareMediatorData</a></p>
+						</dd>
+					</dl>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-type-parameters">
+				<h3>Type parameters</h3>
+				<ul class="tsd-type-parameters">
+					<li>
+						<h4>F</h4>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>type of the trigger payload to be used in the underlying <code>fetch</code> function, for example a form output</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<h4>O</h4>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>type of the output data for the table. This must match MatTable&#39;s generic type</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<a href="_mat_table_mediator_.mattablemediator.html" class="tsd-signature-type">MatTableMediator</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">F</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">ArrayTableMediator</span>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel">
+				<h3>Implements</h3>
+				<ul class="tsd-hierarchy">
+					<li><span class="tsd-signature-type">OnDestroy</span></li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="_mediators_array_mediator_.arraytablemediator.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_mediators_array_mediator_.arraytablemediator.html#_data_" class="tsd-kind-icon">_data$</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_mediators_array_mediator_.arraytablemediator.html#_destroy_" class="tsd-kind-icon">_destroy$</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_mediators_array_mediator_.arraytablemediator.html#_error_" class="tsd-kind-icon">_error$</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_mediators_array_mediator_.arraytablemediator.html#_loading_" class="tsd-kind-icon">_loading$</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_mediators_array_mediator_.arraytablemediator.html#_mediatordata_" class="tsd-kind-icon">_mediator<wbr>Data$</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_mediators_array_mediator_.arraytablemediator.html#_totalresults_" class="tsd-kind-icon">_total<wbr>Results$</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_mediators_array_mediator_.arraytablemediator.html#config" class="tsd-kind-icon">config</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="_mediators_array_mediator_.arraytablemediator.html#fetchfn" class="tsd-kind-icon">fetch<wbr>Fn</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_mediators_array_mediator_.arraytablemediator.html#onpagereset_" class="tsd-kind-icon">on<wbr>Page<wbr>Reset$</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_mediators_array_mediator_.arraytablemediator.html#paginator" class="tsd-kind-icon">paginator</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_mediators_array_mediator_.arraytablemediator.html#sort" class="tsd-kind-icon">sort</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_mediators_array_mediator_.arraytablemediator.html#table" class="tsd-kind-icon">table</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-protected"><a href="_mediators_array_mediator_.arraytablemediator.html#trigger_" class="tsd-kind-icon">trigger$</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-inherited">
+							<h3>Accessors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited"><a href="_mediators_array_mediator_.arraytablemediator.html#data_" class="tsd-kind-icon">data$</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited"><a href="_mediators_array_mediator_.arraytablemediator.html#error_" class="tsd-kind-icon">error$</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited"><a href="_mediators_array_mediator_.arraytablemediator.html#isloading_" class="tsd-kind-icon">is<wbr>Loading$</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited"><a href="_mediators_array_mediator_.arraytablemediator.html#onfetchbegin_" class="tsd-kind-icon">on<wbr>Fetch<wbr>Begin$</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited"><a href="_mediators_array_mediator_.arraytablemediator.html#onnoresultsfound_" class="tsd-kind-icon">on<wbr>NoResults<wbr>Found$</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited"><a href="_mediators_array_mediator_.arraytablemediator.html#onresultsfound_" class="tsd-kind-icon">on<wbr>Results<wbr>Found$</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_mediators_array_mediator_.arraytablemediator.html#page_" class="tsd-kind-icon">page$</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_mediators_array_mediator_.arraytablemediator.html#pageindex" class="tsd-kind-icon">page<wbr>Index</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_mediators_array_mediator_.arraytablemediator.html#pagesize" class="tsd-kind-icon">page<wbr>Size</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_mediators_array_mediator_.arraytablemediator.html#sortactive" class="tsd-kind-icon">sort<wbr>Active</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_mediators_array_mediator_.arraytablemediator.html#sortchange_" class="tsd-kind-icon">sort<wbr>Change$</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_mediators_array_mediator_.arraytablemediator.html#sortdirection" class="tsd-kind-icon">sort<wbr>Direction</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited"><a href="_mediators_array_mediator_.arraytablemediator.html#totalresults_" class="tsd-kind-icon">total<wbr>Results$</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_mediators_array_mediator_.arraytablemediator.html#createdatafetch" class="tsd-kind-icon">create<wbr>Data<wbr>Fetch</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_mediators_array_mediator_.arraytablemediator.html#createonpagereset" class="tsd-kind-icon">create<wbr>OnPage<wbr>Reset</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="_mediators_array_mediator_.arraytablemediator.html#fetch" class="tsd-kind-icon">fetch</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_mediators_array_mediator_.arraytablemediator.html#handleerror" class="tsd-kind-icon">handle<wbr>Error</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_mediators_array_mediator_.arraytablemediator.html#handlepagereset" class="tsd-kind-icon">handle<wbr>Page<wbr>Reset</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_mediators_array_mediator_.arraytablemediator.html#handleresult" class="tsd-kind-icon">handle<wbr>Result</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_mediators_array_mediator_.arraytablemediator.html#ngondestroy" class="tsd-kind-icon">ng<wbr>OnDestroy</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_mediators_array_mediator_.arraytablemediator.html#start" class="tsd-kind-icon">start</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-inherited">
+							<h3>Object literals</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-object-literal tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_mediators_array_mediator_.arraytablemediator.html#default_config" class="tsd-kind-icon">DEFAULT_<wbr>CONFIG</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Array<wbr>Table<wbr>Mediator<span class="tsd-signature-symbol">(</span>fetchFn<span class="tsd-signature-symbol">: </span><a href="../modules/_models_.html#arrayfetchfunction" class="tsd-signature-type">ArrayFetchFunction</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">F</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span>, trigger$<span class="tsd-signature-symbol">: </span><a href="../modules/_models_.html#triggerpayload" class="tsd-signature-type">TriggerPayload</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">F</span><span class="tsd-signature-symbol">&gt;</span>, table<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">MatTable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span>, paginator<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">MatPaginator</span>, sort<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">MatSort</span>, config<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_models_.mediatorconfig.html" class="tsd-signature-type">MediatorConfig</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_mediators_array_mediator_.arraytablemediator.html" class="tsd-signature-type">ArrayTableMediator</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="_mat_table_mediator_.mattablemediator.html">MatTableMediator</a>.<a href="_mat_table_mediator_.mattablemediator.html#constructor">constructor</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/9c2ab8d/src/lib/mediators/array.mediator.ts#L15">mediators/array.mediator.ts:15</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>fetchFn: <a href="../modules/_models_.html#arrayfetchfunction" class="tsd-signature-type">ArrayFetchFunction</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">F</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>trigger$: <a href="../modules/_models_.html#triggerpayload" class="tsd-signature-type">TriggerPayload</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">F</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>table: <span class="tsd-signature-type">MatTable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>paginator: <span class="tsd-signature-type">MatPaginator</span></h5>
+								</li>
+								<li>
+									<h5>sort: <span class="tsd-signature-type">MatSort</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> config: <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_models_.mediatorconfig.html" class="tsd-signature-type">MediatorConfig</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;{}</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_mediators_array_mediator_.arraytablemediator.html" class="tsd-signature-type">ArrayTableMediator</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="_data_" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _data$</h3>
+					<div class="tsd-signature tsd-kind-icon">_data$<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Subject</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;new Subject&lt;Array&lt;O&gt;&gt;()</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_mat_table_mediator_.mattablemediator.html">MatTableMediator</a>.<a href="_mat_table_mediator_.mattablemediator.html#_data_">_data$</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/9c2ab8d/src/lib/mat-table.mediator.ts#L74">mat-table.mediator.ts:74</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The data from the MediatorData object.
+							It only contains the received entities and will be fed into the table.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="_destroy_" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _destroy$</h3>
+					<div class="tsd-signature tsd-kind-icon">_destroy$<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Subject</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;new Subject&lt;void&gt;()</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_mat_table_mediator_.mattablemediator.html">MatTableMediator</a>.<a href="_mat_table_mediator_.mattablemediator.html#_destroy_">_destroy$</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/9c2ab8d/src/lib/mat-table.mediator.ts#L63">mat-table.mediator.ts:63</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A subject for cleanups. Will be called and completed by the <code>ngOnDestroy</code> method.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>see</dt>
+							<dd><p><a href="_mediators_array_mediator_.arraytablemediator.html#ngondestroy">ngOnDestroy</a></p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="_error_" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _error$</h3>
+					<div class="tsd-signature tsd-kind-icon">_error$<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Subject</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;new Subject&lt;Error&gt;()</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_mat_table_mediator_.mattablemediator.html">MatTableMediator</a>.<a href="_mat_table_mediator_.mattablemediator.html#_error_">_error$</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/9c2ab8d/src/lib/mat-table.mediator.ts#L83">mat-table.mediator.ts:83</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The subject that receives any error from the fetching process.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>see</dt>
+							<dd><p>[[handleError</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="_loading_" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _loading$</h3>
+					<div class="tsd-signature tsd-kind-icon">_loading$<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">BehaviorSubject</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;new BehaviorSubject&lt;boolean&gt;(false)</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_mat_table_mediator_.mattablemediator.html">MatTableMediator</a>.<a href="_mat_table_mediator_.mattablemediator.html#_loading_">_loading$</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/9c2ab8d/src/lib/mat-table.mediator.ts#L87">mat-table.mediator.ts:87</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The BehaviorSubject indicating the loading status.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="_mediatordata_" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _mediator<wbr>Data$</h3>
+					<div class="tsd-signature tsd-kind-icon">_mediator<wbr>Data$<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_models_.mediatordata.html" class="tsd-signature-type">MediatorData</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_mat_table_mediator_.mattablemediator.html">MatTableMediator</a>.<a href="_mat_table_mediator_.mattablemediator.html#_mediatordata_">_mediatorData$</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/9c2ab8d/src/lib/mat-table.mediator.ts#L69">mat-table.mediator.ts:69</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The raw MediatorData observable, resulting from the <code>createDataFetch</code> method.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>see</dt>
+							<dd><p><a href="_mediators_array_mediator_.arraytablemediator.html#createdatafetch">createDataFetch</a></p>
+							</dd>
+							<dt>see</dt>
+							<dd><p><a href="_mediators_array_mediator_.arraytablemediator.html#_data_">_data$</a></p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="_totalresults_" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _total<wbr>Results$</h3>
+					<div class="tsd-signature tsd-kind-icon">_total<wbr>Results$<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Subject</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;new Subject&lt;number&gt;()</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_mat_table_mediator_.mattablemediator.html">MatTableMediator</a>.<a href="_mat_table_mediator_.mattablemediator.html#_totalresults_">_totalResults$</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/9c2ab8d/src/lib/mat-table.mediator.ts#L78">mat-table.mediator.ts:78</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The total result count, taken from the MediatorData object.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="config" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> config</h3>
+					<div class="tsd-signature tsd-kind-icon">config<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_models_.mediatorconfig.html" class="tsd-signature-type">MediatorConfig</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_mat_table_mediator_.mattablemediator.html">MatTableMediator</a>.<a href="_mat_table_mediator_.mattablemediator.html#config">config</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/9c2ab8d/src/lib/mat-table.mediator.ts#L111">mat-table.mediator.ts:111</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A frozen <code>MediatorConfig</code>, put together in the constructor.
+							By default the <code>MatTableMediator.DEFAULT_CONFIG</code> values will be used.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>see</dt>
+							<dd><p><a href="_mat_table_mediator_.mattablemediator.html#default_config">MatTableMediator.DEFAULT_CONFIG</a></p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="fetchfn" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> fetch<wbr>Fn</h3>
+					<div class="tsd-signature tsd-kind-icon">fetch<wbr>Fn<span class="tsd-signature-symbol">:</span> <a href="../modules/_models_.html#arrayfetchfunction" class="tsd-signature-type">ArrayFetchFunction</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">F</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/9c2ab8d/src/lib/mediators/array.mediator.ts#L17">mediators/array.mediator.ts:17</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="onpagereset_" class="tsd-anchor"></a>
+					<h3>on<wbr>Page<wbr>Reset$</h3>
+					<div class="tsd-signature tsd-kind-icon">on<wbr>Page<wbr>Reset$<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">EventEmitter</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Sort</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">F</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_mat_table_mediator_.mattablemediator.html">MatTableMediator</a>.<a href="_mat_table_mediator_.mattablemediator.html#onpagereset_">onPageReset$</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/9c2ab8d/src/lib/mat-table.mediator.ts#L94">mat-table.mediator.ts:94</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>An observable that emits, whenever the page is reset.
+							To change the behaviour overwrite the <code>createOnPageReset</code> method.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>see</dt>
+							<dd><p><a href="_mediators_array_mediator_.arraytablemediator.html#createonpagereset">createOnPageReset</a></p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="paginator" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagOptional">Optional</span> paginator</h3>
+					<div class="tsd-signature tsd-kind-icon">paginator<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">MatPaginator</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_mat_table_mediator_.mattablemediator.html">MatTableMediator</a>.<a href="_mat_table_mediator_.mattablemediator.html#paginator">paginator</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/9c2ab8d/src/lib/mat-table.mediator.ts#L123">mat-table.mediator.ts:123</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Reference to the MatPaginator</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="sort" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagOptional">Optional</span> sort</h3>
+					<div class="tsd-signature tsd-kind-icon">sort<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">MatSort</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_mat_table_mediator_.mattablemediator.html">MatTableMediator</a>.<a href="_mat_table_mediator_.mattablemediator.html#sort">sort</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/9c2ab8d/src/lib/mat-table.mediator.ts#L124">mat-table.mediator.ts:124</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Reference to the MatSort</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="table" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> table</h3>
+					<div class="tsd-signature tsd-kind-icon">table<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">MatTable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_mat_table_mediator_.mattablemediator.html">MatTableMediator</a>.<a href="_mat_table_mediator_.mattablemediator.html#table">table</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/9c2ab8d/src/lib/mat-table.mediator.ts#L122">mat-table.mediator.ts:122</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Reference to the MatTable</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
+					<a name="trigger_" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> trigger$</h3>
+					<div class="tsd-signature tsd-kind-icon">trigger$<span class="tsd-signature-symbol">:</span> <a href="../modules/_models_.html#triggerpayload" class="tsd-signature-type">TriggerPayload</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">F</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<p>Overrides <a href="_mat_table_mediator_.mattablemediator.html">MatTableMediator</a>.<a href="_mat_table_mediator_.mattablemediator.html#trigger_">trigger$</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/9c2ab8d/src/lib/mediators/array.mediator.ts#L18">mediators/array.mediator.ts:18</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
+				<h2>Accessors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+					<a name="data_" class="tsd-anchor"></a>
+					<h3>data$</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> data$<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_mat_table_mediator_.mattablemediator.html">MatTableMediator</a>.<a href="_mat_table_mediator_.mattablemediator.html#data_">data$</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/9c2ab8d/src/lib/mat-table.mediator.ts#L309">mat-table.mediator.ts:309</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>An observable of the data, which gets fed into the table.
+									The mediator takes care of feeding the table. You can use this property for additional actions.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+					<a name="error_" class="tsd-anchor"></a>
+					<h3>error$</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> error$<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_mat_table_mediator_.mattablemediator.html">MatTableMediator</a>.<a href="_mat_table_mediator_.mattablemediator.html#error_">error$</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/9c2ab8d/src/lib/mat-table.mediator.ts#L317">mat-table.mediator.ts:317</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>An observable with the latest error.
+									It does <strong>NOT</strong> return undefined, when a fetch was successful.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+					<a name="isloading_" class="tsd-anchor"></a>
+					<h3>is<wbr>Loading$</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> isLoading$<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_mat_table_mediator_.mattablemediator.html">MatTableMediator</a>.<a href="_mat_table_mediator_.mattablemediator.html#isloading_">isLoading$</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/9c2ab8d/src/lib/mat-table.mediator.ts#L326">mat-table.mediator.ts:326</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>An observable which indicates loading.
+										by default loading starts when the fetch function gets triggered and
+									ends when data was received and just before the table and paginator gets fed.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+					<a name="onfetchbegin_" class="tsd-anchor"></a>
+					<h3>on<wbr>Fetch<wbr>Begin$</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> onFetchBegin$<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_mat_table_mediator_.mattablemediator.html">MatTableMediator</a>.<a href="_mat_table_mediator_.mattablemediator.html#onfetchbegin_">onFetchBegin$</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/9c2ab8d/src/lib/mat-table.mediator.ts#L368">mat-table.mediator.ts:368</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>An observable which only emits if loading has started.
+									You may use this to hide an error message or perform other actions.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+					<a name="onnoresultsfound_" class="tsd-anchor"></a>
+					<h3>on<wbr>NoResults<wbr>Found$</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> onNoResultsFound$<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_mat_table_mediator_.mattablemediator.html">MatTableMediator</a>.<a href="_mat_table_mediator_.mattablemediator.html#onnoresultsfound_">onNoResultsFound$</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/9c2ab8d/src/lib/mat-table.mediator.ts#L357">mat-table.mediator.ts:357</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>An observable which only emits if no results were found.</p>
+								</div>
+								<p>It&#39;s a filter for the resultsLength$ property with <code>x &lt;= 0</code>.</p>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+					<a name="onresultsfound_" class="tsd-anchor"></a>
+					<h3>on<wbr>Results<wbr>Found$</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> onResultsFound$<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_mat_table_mediator_.mattablemediator.html">MatTableMediator</a>.<a href="_mat_table_mediator_.mattablemediator.html#onresultsfound_">onResultsFound$</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/9c2ab8d/src/lib/mat-table.mediator.ts#L348">mat-table.mediator.ts:348</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns an observable which only emits if results were found.</p>
+								</div>
+								<p>It&#39;s a filter for the resultsLength$ property with <code>x &gt; 0</code>.</p>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="page_" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> page$</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> page$<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">EventEmitter</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">PageEvent</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_mat_table_mediator_.mattablemediator.html">MatTableMediator</a>.<a href="_mat_table_mediator_.mattablemediator.html#page_">page$</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/9c2ab8d/src/lib/mat-table.mediator.ts#L155">mat-table.mediator.ts:155</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>safely returns <code>this.paginator.page.pipe(startWith({}))</code> or <code>of(undefined)</code>, if MatPaginator object wasn&#39;t provided</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">EventEmitter</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">PageEvent</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="pageindex" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> page<wbr>Index</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> pageIndex<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_mat_table_mediator_.mattablemediator.html">MatTableMediator</a>.<a href="_mat_table_mediator_.mattablemediator.html#pageindex">pageIndex</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/9c2ab8d/src/lib/mat-table.mediator.ts#L170">mat-table.mediator.ts:170</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>safely returns <code>this.paginator.pageIndex</code> or <code>undefined</code>, if MatPaginator object wasn&#39;t provided</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">undefined</span>
+							</h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="pagesize" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> page<wbr>Size</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> pageSize<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_mat_table_mediator_.mattablemediator.html">MatTableMediator</a>.<a href="_mat_table_mediator_.mattablemediator.html#pagesize">pageSize</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/9c2ab8d/src/lib/mat-table.mediator.ts#L177">mat-table.mediator.ts:177</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>safely returns <code>this.paginator.pageSize</code> or <code>undefined</code>, if MatPaginator object wasn&#39;t provided</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">undefined</span>
+							</h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="sortactive" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> sort<wbr>Active</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> sortActive<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_mat_table_mediator_.mattablemediator.html">MatTableMediator</a>.<a href="_mat_table_mediator_.mattablemediator.html#sortactive">sortActive</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/9c2ab8d/src/lib/mat-table.mediator.ts#L141">mat-table.mediator.ts:141</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>safely returns <code>this.sort.active</code> or <code>undefined</code>, if MatSort object wasn&#39;t provided</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">undefined</span>
+							</h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="sortchange_" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> sort<wbr>Change$</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> sortChange$<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">EventEmitter</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Sort</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_mat_table_mediator_.mattablemediator.html">MatTableMediator</a>.<a href="_mat_table_mediator_.mattablemediator.html#sortchange_">sortChange$</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/9c2ab8d/src/lib/mat-table.mediator.ts#L134">mat-table.mediator.ts:134</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>safely returns <code>this.sort.sortChange.pipe(startWith({}))</code> or <code>of(undefined)</code>, if MatSort object wasn&#39;t provided</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">EventEmitter</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Sort</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="sortdirection" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> sort<wbr>Direction</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> sortDirection<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">SortDirection</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_mat_table_mediator_.mattablemediator.html">MatTableMediator</a>.<a href="_mat_table_mediator_.mattablemediator.html#sortdirection">sortDirection</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/9c2ab8d/src/lib/mat-table.mediator.ts#L148">mat-table.mediator.ts:148</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>safely returns <code>this.sort.direction</code> or <code>undefined</code>, if MatSort object wasn&#39;t provided</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">SortDirection</span>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">undefined</span>
+							</h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+					<a name="totalresults_" class="tsd-anchor"></a>
+					<h3>total<wbr>Results$</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> totalResults$<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_mat_table_mediator_.mattablemediator.html">MatTableMediator</a>.<a href="_mat_table_mediator_.mattablemediator.html#totalresults_">totalResults$</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/9c2ab8d/src/lib/mat-table.mediator.ts#L339">mat-table.mediator.ts:339</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>An observable which emits the total count of results that are available on the server.
+									The mediator takes care of feeding the paginator. You can use this property for additional actions.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="createdatafetch" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> create<wbr>Data<wbr>Fetch</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Data<wbr>Fetch<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_models_.mediatordata.html" class="tsd-signature-type">MediatorData</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_mat_table_mediator_.mattablemediator.html">MatTableMediator</a>.<a href="_mat_table_mediator_.mattablemediator.html#createdatafetch">createDataFetch</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/9c2ab8d/src/lib/mat-table.mediator.ts#L230">mat-table.mediator.ts:230</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>This is the mediator&#39;s core function and setups the logic.
+									It merges the relevant observables, starts the fetch function and maps the values to fit the mediator&#39;s needs.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_models_.mediatordata.html" class="tsd-signature-type">MediatorData</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="createonpagereset" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> create<wbr>OnPage<wbr>Reset</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>OnPage<wbr>Reset<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">EventEmitter</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Sort</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">F</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_mat_table_mediator_.mattablemediator.html">MatTableMediator</a>.<a href="_mat_table_mediator_.mattablemediator.html#createonpagereset">createOnPageReset</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/9c2ab8d/src/lib/mat-table.mediator.ts#L222">mat-table.mediator.ts:222</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>This function creates an internal observable to reset the paginator.
+									By default it merges <code>sortChange$</code> and the <code>trigger$</code> observable.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>see</dt>
+									<dd><p><a href="_mediators_array_mediator_.arraytablemediator.html#sortchange_">sortChange$</a></p>
+									</dd>
+									<dt>see</dt>
+									<dd><p><a href="_mediators_array_mediator_.arraytablemediator.html#trigger_">trigger$</a></p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">EventEmitter</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Sort</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">F</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span>
+							</h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+					<a name="fetch" class="tsd-anchor"></a>
+					<h3>fetch</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">fetch<span class="tsd-signature-symbol">(</span>payload<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">F</span>, sortBy<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, sortDirection<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">SortDirection</span>, pageIndex<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, pageSize<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_models_.mediatordata.html" class="tsd-signature-type">MediatorData</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="_mat_table_mediator_.mattablemediator.html">MatTableMediator</a>.<a href="_mat_table_mediator_.mattablemediator.html#fetch">fetch</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/9c2ab8d/src/lib/mediators/array.mediator.ts#L27">mediators/array.mediator.ts:27</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> payload: <span class="tsd-signature-type">F</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> sortBy: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> sortDirection: <span class="tsd-signature-type">SortDirection</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> pageIndex: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> pageSize: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_models_.mediatordata.html" class="tsd-signature-type">MediatorData</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="handleerror" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> handle<wbr>Error</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">handle<wbr>Error<span class="tsd-signature-symbol">(</span>error<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_models_.mediatordata.html" class="tsd-signature-type">MediatorData</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_mat_table_mediator_.mattablemediator.html">MatTableMediator</a>.<a href="_mat_table_mediator_.mattablemediator.html#handleerror">handleError</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/9c2ab8d/src/lib/mat-table.mediator.ts#L268">mat-table.mediator.ts:268</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>This function handles any errors that occur while fetching the data.
+										You can either safely handle the error and return replacement data or rethrow the error.
+									Throwing an error will complete the observable and would have to be started again by calling #initDataFetch</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>error: <span class="tsd-signature-type">Error</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The thrown error</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_models_.mediatordata.html" class="tsd-signature-type">MediatorData</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>The replacement data as an observable (e.g. <code>return of({ total: -1, data: [] });</code>)</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="handlepagereset" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> handle<wbr>Page<wbr>Reset</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">handle<wbr>Page<wbr>Reset<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">EventEmitter</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Sort</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">F</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_mat_table_mediator_.mattablemediator.html">MatTableMediator</a>.<a href="_mat_table_mediator_.mattablemediator.html#handlepagereset">handlePageReset</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/9c2ab8d/src/lib/mat-table.mediator.ts#L255">mat-table.mediator.ts:255</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Handler that gets called whenever the <code>onPageReset$</code> observable emits.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>see</dt>
+									<dd><p><a href="_mediators_array_mediator_.arraytablemediator.html#onpagereset_">onPageReset$</a></p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">EventEmitter</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Sort</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">F</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the result of the <code>onPageReset$</code> observable</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="handleresult" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> handle<wbr>Result</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">handle<wbr>Result<span class="tsd-signature-symbol">(</span>result<span class="tsd-signature-symbol">: </span><a href="../interfaces/_models_.mediatordata.html" class="tsd-signature-type">MediatorData</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_mat_table_mediator_.mattablemediator.html">MatTableMediator</a>.<a href="_mat_table_mediator_.mattablemediator.html#handleresult">handleResult</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/9c2ab8d/src/lib/mat-table.mediator.ts#L282">mat-table.mediator.ts:282</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>This function gets called every time new data was fetched. It&#39;s responsible for feeding the data into the table and paginator.
+									It also controls the subjects for the properties like data$, resultsLength$ and isLoading$</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>result: <a href="../interfaces/_models_.mediatordata.html" class="tsd-signature-type">MediatorData</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the result of the fetchFn, already mapped to MediatorData<O></p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="ngondestroy" class="tsd-anchor"></a>
+					<h3>ng<wbr>OnDestroy</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">ng<wbr>OnDestroy<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_mat_table_mediator_.mattablemediator.html">MatTableMediator</a>.<a href="_mat_table_mediator_.mattablemediator.html#ngondestroy">ngOnDestroy</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/9c2ab8d/src/lib/mat-table.mediator.ts#L380">mat-table.mediator.ts:380</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Completes all created observables so there are no memory leaks.</p>
+								</div>
+								<p><strong>You have to call this manually!</strong></p>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="start" class="tsd-anchor"></a>
+					<h3>start</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">start<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_mat_table_mediator_.mattablemediator.html">MatTableMediator</a>.<a href="_mat_table_mediator_.mattablemediator.html#start">start</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/9c2ab8d/src/lib/mat-table.mediator.ts#L193">mat-table.mediator.ts:193</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>This function initialises the page reset and the fetch function, effectively starting the mediator.
+									It won&#39;t be called automatically. You may want to call it at the end of your subclass&#39; constructor.</p>
+								</div>
+								<pre><code class="language-typescript"><span class="hljs-keyword">this</span>.onPageReset$ = <span class="hljs-keyword">this</span>.createOnPageReset();
+<span class="hljs-keyword">this</span>.onPageReset$.subscribe(<span class="hljs-function"><span class="hljs-params">value</span> =&gt;</span> <span class="hljs-keyword">this</span>.handlePageReset(value));
+<span class="hljs-comment">// within this method any errors will be forwarded to `handleError`</span>
+<span class="hljs-keyword">this</span>._mediatorData$ = <span class="hljs-keyword">this</span>.createDataFetch();
+<span class="hljs-keyword">this</span>._mediatorData$.subscribe(<span class="hljs-function"><span class="hljs-params">result</span> =&gt;</span> <span class="hljs-keyword">this</span>.handleResult(result));</code></pre>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
+				<h2>Object literals</h2>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+					<a name="default_config" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> DEFAULT_<wbr>CONFIG</h3>
+					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>CONFIG<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_mat_table_mediator_.mattablemediator.html">MatTableMediator</a>.<a href="_mat_table_mediator_.mattablemediator.html#default_config">DEFAULT_CONFIG</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/9c2ab8d/src/lib/mat-table.mediator.ts#L53">mat-table.mediator.ts:53</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The default config for mediators.</p>
+							<pre><code class="language-typescript">{
+  trackByFn: <span class="hljs-function"><span class="hljs-params">index</span> =&gt;</span> index, <span class="hljs-comment">// track by index</span>
+  attempts: <span class="hljs-number">0</span>,               <span class="hljs-comment">// do not retry</span>
+  debounceLoading: <span class="hljs-number">150</span>       <span class="hljs-comment">// debounce loading indicator by 150ms</span>
+}</code></pre>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>see</dt>
+							<dd><p><a href="../interfaces/_models_.mediatorconfig.html">MediatorConfig</a></p>
+							</dd>
+						</dl>
+					</div>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="default_config.attempts" class="tsd-anchor"></a>
+						<h3>attempts</h3>
+						<div class="tsd-signature tsd-kind-icon">attempts<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;0</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/9c2ab8d/src/lib/mat-table.mediator.ts#L55">mat-table.mediator.ts:55</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="default_config.debounceloading" class="tsd-anchor"></a>
+						<h3>debounce<wbr>Loading</h3>
+						<div class="tsd-signature tsd-kind-icon">debounce<wbr>Loading<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;150</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/9c2ab8d/src/lib/mat-table.mediator.ts#L56">mat-table.mediator.ts:56</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
+						<a name="default_config.trackbyfn" class="tsd-anchor"></a>
+						<h3>track<wbr>ByFn</h3>
+						<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
+							<li class="tsd-signature tsd-kind-icon">track<wbr>ByFn<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/9c2ab8d/src/lib/mat-table.mediator.ts#L54">mat-table.mediator.ts:54</a></li>
+									</ul>
+								</aside>
+								<h4 class="tsd-parameters-title">Parameters</h4>
+								<ul class="tsd-parameters">
+									<li>
+										<h5>index: <span class="tsd-signature-type">number</span></h5>
+									</li>
+								</ul>
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							</li>
+						</ul>
+					</section>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_mat_table_mediator_.html">"mat-<wbr>table.mediator"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_mediated_table_component_.html">"mediated-<wbr>table.component"</a>
+					</li>
+					<li class="current tsd-kind-external-module">
+						<a href="../modules/_mediators_array_mediator_.html">"mediators/array.mediator"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_mediators_simple_mediator_.html">"mediators/simple.mediator"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_models_.html">"models"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_templates_.html">"templates"</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class tsd-parent-kind-external-module tsd-has-type-parameter">
+						<a href="_mediators_array_mediator_.arraytablemediator.html" class="tsd-kind-icon">Array<wbr>Table<wbr>Mediator</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+								<a href="_mediators_array_mediator_.arraytablemediator.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="_mediators_array_mediator_.arraytablemediator.html#_data_" class="tsd-kind-icon">_data$</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="_mediators_array_mediator_.arraytablemediator.html#_destroy_" class="tsd-kind-icon">_destroy$</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="_mediators_array_mediator_.arraytablemediator.html#_error_" class="tsd-kind-icon">_error$</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="_mediators_array_mediator_.arraytablemediator.html#_loading_" class="tsd-kind-icon">_loading$</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="_mediators_array_mediator_.arraytablemediator.html#_mediatordata_" class="tsd-kind-icon">_mediator<wbr>Data$</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="_mediators_array_mediator_.arraytablemediator.html#_totalresults_" class="tsd-kind-icon">_total<wbr>Results$</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="_mediators_array_mediator_.arraytablemediator.html#config" class="tsd-kind-icon">config</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="_mediators_array_mediator_.arraytablemediator.html#fetchfn" class="tsd-kind-icon">fetch<wbr>Fn</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="_mediators_array_mediator_.arraytablemediator.html#onpagereset_" class="tsd-kind-icon">on<wbr>Page<wbr>Reset$</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="_mediators_array_mediator_.arraytablemediator.html#paginator" class="tsd-kind-icon">paginator</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="_mediators_array_mediator_.arraytablemediator.html#sort" class="tsd-kind-icon">sort</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="_mediators_array_mediator_.arraytablemediator.html#table" class="tsd-kind-icon">table</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
+								<a href="_mediators_array_mediator_.arraytablemediator.html#trigger_" class="tsd-kind-icon">trigger$</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+								<a href="_mediators_array_mediator_.arraytablemediator.html#data_" class="tsd-kind-icon">data$</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+								<a href="_mediators_array_mediator_.arraytablemediator.html#error_" class="tsd-kind-icon">error$</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+								<a href="_mediators_array_mediator_.arraytablemediator.html#isloading_" class="tsd-kind-icon">is<wbr>Loading$</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+								<a href="_mediators_array_mediator_.arraytablemediator.html#onfetchbegin_" class="tsd-kind-icon">on<wbr>Fetch<wbr>Begin$</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+								<a href="_mediators_array_mediator_.arraytablemediator.html#onnoresultsfound_" class="tsd-kind-icon">on<wbr>NoResults<wbr>Found$</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+								<a href="_mediators_array_mediator_.arraytablemediator.html#onresultsfound_" class="tsd-kind-icon">on<wbr>Results<wbr>Found$</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="_mediators_array_mediator_.arraytablemediator.html#page_" class="tsd-kind-icon">page$</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="_mediators_array_mediator_.arraytablemediator.html#pageindex" class="tsd-kind-icon">page<wbr>Index</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="_mediators_array_mediator_.arraytablemediator.html#pagesize" class="tsd-kind-icon">page<wbr>Size</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="_mediators_array_mediator_.arraytablemediator.html#sortactive" class="tsd-kind-icon">sort<wbr>Active</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="_mediators_array_mediator_.arraytablemediator.html#sortchange_" class="tsd-kind-icon">sort<wbr>Change$</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="_mediators_array_mediator_.arraytablemediator.html#sortdirection" class="tsd-kind-icon">sort<wbr>Direction</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+								<a href="_mediators_array_mediator_.arraytablemediator.html#totalresults_" class="tsd-kind-icon">total<wbr>Results$</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="_mediators_array_mediator_.arraytablemediator.html#createdatafetch" class="tsd-kind-icon">create<wbr>Data<wbr>Fetch</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="_mediators_array_mediator_.arraytablemediator.html#createonpagereset" class="tsd-kind-icon">create<wbr>OnPage<wbr>Reset</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+								<a href="_mediators_array_mediator_.arraytablemediator.html#fetch" class="tsd-kind-icon">fetch</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="_mediators_array_mediator_.arraytablemediator.html#handleerror" class="tsd-kind-icon">handle<wbr>Error</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="_mediators_array_mediator_.arraytablemediator.html#handlepagereset" class="tsd-kind-icon">handle<wbr>Page<wbr>Reset</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="_mediators_array_mediator_.arraytablemediator.html#handleresult" class="tsd-kind-icon">handle<wbr>Result</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="_mediators_array_mediator_.arraytablemediator.html#ngondestroy" class="tsd-kind-icon">ng<wbr>OnDestroy</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="_mediators_array_mediator_.arraytablemediator.html#start" class="tsd-kind-icon">start</a>
+							</li>
+							<li class=" tsd-kind-object-literal tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+								<a href="_mediators_array_mediator_.arraytablemediator.html#default_config" class="tsd-kind-icon">DEFAULT_<wbr>CONFIG</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+						<a href="../modules/_mediators_array_mediator_.html#preparemediatordata" class="tsd-kind-icon">prepare<wbr>Mediator<wbr>Data</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>
