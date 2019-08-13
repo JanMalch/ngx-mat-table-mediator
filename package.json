@@ -15,7 +15,7 @@
     "lint": "ng lint",
     "release": "standard-version --no-verify",
     "readme": "ts-node ./tools/copy-readme",
-    "docs": "typedoc src/lib/ --out docs",
+    "docs": "typedoc src/lib/ --out docs && ts-node ./tools/no-jekyll-docs",
     "ci": "npm run lint && npm run test:ci && npm run build:ci && npm run docs"
   },
   "publishConfig": {
