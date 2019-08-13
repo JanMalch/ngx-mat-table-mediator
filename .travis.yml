@@ -12,7 +12,11 @@ cache:
     - node_modules
 
 script:
+  - npm install codecov -g
   - npm run ci
+
+after_success:
+  - codecov
 
 deploy:
   - provider: pages
