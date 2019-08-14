@@ -1,8 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { AfterViewInit, Component } from '@angular/core';
 import { SortDirection } from '@angular/material';
-import { ArrayTableMediator, Columns, MediatedTableComponent } from 'ngx-mat-table-mediator';
+import {
+  Column,
+  Columns,
+  MediatedTableComponent,
+  MediatorData,
+  prepareMediatorData
+} from 'ngx-mat-table-mediator';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { JsonPlaceholderComment } from '../models';
 
 @Component({
@@ -18,20 +25,26 @@ export class JsonPlaceholderComponent
   trigger$ = new BehaviorSubject<string>('');
 
   constructor(private http: HttpClient) {
-    super(ArrayTableMediator, true);
+    super();
   }
 
   fetch(
     payload: string,
-    sortBy: string,
+    sortBy: Column<JsonPlaceholderComment>,
     sortDirection: SortDirection,
     pageIndex: number,
     pageSize: number
-  ): Observable<Array<Comment>> {
-    return !!payload && payload.trim().length > 0
-      ? this.http.get<Array<Comment>>(
-          `https://jsonplaceholder.typicode.com/comments?postId=${payload}`
-        )
-      : this.http.get<Array<Comment>>(`https://jsonplaceholder.typicode.com/comments`);
+  ): Observable<MediatorData<JsonPlaceholderComment>> {
+    const base$ =
+      !!payload && payload.trim().length > 0
+        ? this.http.get<Array<JsonPlaceholderComment>>(
+            `https://jsonplaceholder.typicode.com/comments?postId=${payload}`
+          )
+        : this.http.get<Array<JsonPlaceholderComment>>(
+            `https://jsonplaceholder.typicode.com/comments`
+          );
+    return base$.pipe(
+      map(rawData => prepareMediatorData(rawData, sortBy, sortDirection, pageIndex, pageSize))
+    );
   }
 }

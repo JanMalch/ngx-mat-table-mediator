@@ -1,12 +1,13 @@
 import { MatPaginator, MatSort, MatTable, SortDirection } from '@angular/material';
 import { Observable } from 'rxjs';
-import { MatTableMediator } from '../mat-table.mediator';
+import { MatTableMediator } from './mat-table.mediator';
 import {
-  MediatedFetchFunction,
+  Column,
+  FetchFunction,
   MediatorConfig,
   MediatorData,
   TriggerPayload
-} from '../models';
+} from './models';
 
 /**
  * A simple implementation of `MatTableMediator` that takes the `fetch` function as an `constructor` argument.
@@ -16,7 +17,7 @@ import {
  */
 export class SimpleTableMediator<F, O> extends MatTableMediator<F, O> {
   constructor(
-    protected fetchFn: MediatedFetchFunction<F, O>,
+    protected fetchFn: FetchFunction<F, O>,
     protected trigger$: TriggerPayload<F>,
     table: MatTable<O>,
     paginator: MatPaginator,
@@ -28,7 +29,7 @@ export class SimpleTableMediator<F, O> extends MatTableMediator<F, O> {
 
   fetch(
     payload?: F,
-    sortBy?: string,
+    sortBy?: Column<O>,
     sortDirection?: SortDirection,
     pageIndex?: number,
     pageSize?: number

@@ -11,7 +11,8 @@ import {
   MediatorData,
   SimpleTableMediator,
   MTM_TABLE_TMPL,
-  Columns
+  Columns,
+  Column
 } from 'ngx-mat-table-mediator';
 import { Observable } from 'rxjs';
 import { mockPersonData, Person } from '../models';
@@ -51,12 +52,12 @@ export class CustomConfigComponent extends MediatedTableComponent<void, Person>
   };
 
   constructor(private myDataService: MyDataService) {
-    super(SimpleTableMediator);
+    super();
   }
 
   fetch(
     payload?: void,
-    sortBy?: string,
+    sortBy?: Column<Person>,
     sortDirection?: 'asc' | 'desc' | '',
     pageIndex?: number,
     pageSize?: number

@@ -84,15 +84,14 @@ Additionally you have access to
 @Component({
   selector: 'app-minimal',
   template: MTM_TABLE_SORT_PAGINATOR_TMPL, // template with table, sort and paginator
-  styleUrls: ['./minimal.component.css'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./minimal.component.css']
 })
 export class MinimalComponent extends MediatedTableComponent<void, Person>
   implements AfterViewInit, OnDestroy {
   columns: Columns<Person> = ['name', 'age'];
 
   constructor(private http: HttpClient) {
-    super(SimpleTableMediator);
+    super();
   }
 
   fetch(

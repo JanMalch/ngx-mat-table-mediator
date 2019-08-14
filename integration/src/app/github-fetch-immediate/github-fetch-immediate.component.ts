@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { SortDirection } from '@angular/material';
 import {
+  Column,
   Columns,
   MediatedTableComponent,
   MediatorData,
@@ -31,7 +32,7 @@ export class GithubFetchImmediateComponent extends MediatedTableComponent<any, G
   isRateLimitReached$ = new BehaviorSubject<boolean>(false); // loading starts instantly, use super(SimpleTableMediator, true);
 
   constructor(private http: HttpClient) {
-    super(SimpleTableMediator);
+    super();
   }
 
   ngAfterViewInit(): void {
@@ -43,7 +44,7 @@ export class GithubFetchImmediateComponent extends MediatedTableComponent<any, G
 
   fetch(
     payload: undefined,
-    sortBy: string,
+    sortBy: Column<GithubIssue>,
     sortDirection: SortDirection,
     pageIndex: number,
     pageSize: number

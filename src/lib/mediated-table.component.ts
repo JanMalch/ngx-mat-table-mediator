@@ -2,7 +2,15 @@ import { AfterViewInit, OnDestroy, ViewChild } from '@angular/core';
 import { MatPaginator, MatSort, MatTable, SortDirection } from '@angular/material';
 import { Observable, of } from 'rxjs';
 import { MatTableMediator } from './mat-table.mediator';
-import { Columns, MediatorConfig, MediatorData, Newable, TriggerPayload } from './models';
+import { SimpleTableMediator } from './simple.mediator';
+import {
+  Column,
+  Columns,
+  MediatorConfig,
+  MediatorData,
+  Newable,
+  TriggerPayload
+} from './models';
 
 /**
  * This component reduces all boilerplate code to the absolut minimum:
@@ -62,8 +70,8 @@ export abstract class MediatedTableComponent<F, O> implements AfterViewInit, OnD
    * @param initialIsLoading the initial value for isLoading$
    */
   protected constructor(
-    private mediatorClass: Newable<MatTableMediator<F, O>>,
-    initialIsLoading: boolean = true
+    initialIsLoading: boolean = true,
+    private mediatorClass: Newable<MatTableMediator<F, O>> = SimpleTableMediator
   ) {
     this.isLoading$ = of(initialIsLoading);
   }
@@ -78,11 +86,11 @@ export abstract class MediatedTableComponent<F, O> implements AfterViewInit, OnD
    */
   abstract fetch(
     payload?: F,
-    sortBy?: string,
+    sortBy?: Column<O>,
     sortDirection?: SortDirection,
     pageIndex?: number,
     pageSize?: number
-  ): Observable<MediatorData<O> | Array<O> | any>;
+  ): Observable<MediatorData<O>>;
 
   /**
    * Calls the `initMediator` method.

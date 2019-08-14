@@ -8,7 +8,7 @@ import {
   MediatorConfig,
   MediatorData,
   SimpleTableMediator
-} from '../../public-api';
+} from '../public-api';
 
 describe('SimpleTableMediator', () => {
   let mediator: MatTableMediator<void, string>;

@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatPaginator, MatSort, MatTable, SortDirection } from '@angular/material';
 import {
+  Column,
   Columns,
   MatTableMediator,
   MediatorData,
@@ -21,7 +22,7 @@ export class MyCustomMediator extends MatTableMediator<void, Person> {
 
   fetch(
     payload: undefined,
-    sortBy: string,
+    sortBy: Column<Person>,
     sortDirection: SortDirection,
     pageIndex: number,
     pageSize: number

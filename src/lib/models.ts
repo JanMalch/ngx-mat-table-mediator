@@ -17,28 +17,11 @@ export type TriggerPayload<F> = Observable<F>;
  */
 export type FetchFunction<F, O> = (
   payload?: F,
-  sortBy?: string,
+  sortBy?: Column<O>,
   sortDirection?: SortDirection,
   pageIndex?: number,
   pageSize?: number
-) => Observable<O>;
-
-/**
- * Type alias for a function that fetches the data for the table
- * and returns objects of type `MediatorData<O>`.
- * @typeparam F type of the trigger payload, same <F> as the mediator's
- * @typeparam O type of the data, same <O> as the mediator's
- */
-export type MediatedFetchFunction<F, O> = FetchFunction<F, MediatorData<O>>;
-
-/**
- * Type alias for a function that fetches the data for the table
- * and returns objects of type `Array<O>`. The data still has to be mapped to
- * `MediatorData` in a later step.
- * @typeparam F type of the trigger payload, same <F> as the mediator's
- * @typeparam O type of the data, same <O> as the mediator's
- */
-export type ArrayFetchFunction<F, O> = FetchFunction<F, Array<O>>;
+) => Observable<MediatorData<O>>;
 
 /**
  * Interface for the transformed API output so the mediator can feed the data in the table and observables.
@@ -80,4 +63,10 @@ export type Newable<T> = new (...args: any[]) => T;
  * alias for an array with keys of O
  * @typeparam O type of the array with the table data, same <O> as the mediator's
  */
-export type Columns<O> = Array<keyof O>;
+export type Columns<O> = Array<Column<O>>;
+
+/**
+ * alias for a single key of O
+ * @typeparam O type of the array with the table data, same <O> as the mediator's
+ */
+export type Column<O> = keyof O;

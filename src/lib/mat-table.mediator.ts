@@ -18,7 +18,8 @@ import {
   startWith,
   takeUntil
 } from 'rxjs/operators';
-import { MediatorConfig, MediatorData, TriggerPayload } from './models';
+import { instanceOfMediatorData } from './functions';
+import { Column, MediatorConfig, MediatorData, TriggerPayload } from './models';
 
 // tslint:disable:variable-name
 /**
@@ -138,8 +139,8 @@ export abstract class MatTableMediator<F, O> implements OnDestroy {
   /**
    * safely returns `this.sort.active` or `undefined`, if MatSort object wasn't provided
    */
-  protected get sortActive(): string | undefined {
-    return !!this.sort ? this.sort.active : undefined;
+  protected get sortActive(): Column<O> | undefined {
+    return !!this.sort ? (this.sort.active as Column<O>) : undefined;
   }
 
   /**
@@ -207,7 +208,7 @@ export abstract class MatTableMediator<F, O> implements OnDestroy {
    */
   abstract fetch(
     payload?: F,
-    sortBy?: string,
+    sortBy?: Column<O>,
     sortDirection?: SortDirection,
     pageIndex?: number,
     pageSize?: number
@@ -385,18 +386,4 @@ export abstract class MatTableMediator<F, O> implements OnDestroy {
     this._loading$.complete();
     this._totalResults$.complete();
   }
-}
-
-/**
- * Determines wether the given object is a valid `MediatorData` instance.
- * It only returns true, if
- * - the object is not null or undefined
- * - is an object
- * - has a `data` field
- * - has a `total` field
- * @param object the object to check against
- * @returns true, if the object is a valid `MediatorData` object
- */
-export function instanceOfMediatorData(object: any): object is MediatorData<any> {
-  return object != null && typeof object === 'object' && 'data' in object && 'total' in object;
 }

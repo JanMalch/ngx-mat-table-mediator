@@ -19,7 +19,7 @@ export class TestComponent extends MediatedTableComponent<void, { name: string }
   columns: Columns<{ name: string }> = ['name'];
 
   constructor() {
-    super(SimpleTableMediator);
+    super();
   }
 
   fetch(

@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { AfterViewInit, Component, OnDestroy } from '@angular/core';
 import { MatSnackBar, SortDirection } from '@angular/material';
 import {
+  Column,
   Columns,
   MediatedTableComponent,
   MediatorData,
@@ -31,7 +32,7 @@ export class GithubFetchComponent extends MediatedTableComponent<any, GithubIssu
   isRateLimitReached$ = new BehaviorSubject<boolean>(false);
 
   constructor(private http: HttpClient, private snackBar: MatSnackBar) {
-    super(SimpleTableMediator, false);
+    super(false);
   }
 
   ngAfterViewInit(): void {
@@ -49,7 +50,7 @@ export class GithubFetchComponent extends MediatedTableComponent<any, GithubIssu
 
   fetch(
     payload: undefined,
-    sortBy: string,
+    sortBy: Column<GithubIssue>,
     sortDirection: SortDirection,
     pageIndex: number,
     pageSize: number

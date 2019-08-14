@@ -1,7 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
-import { MatPaginator, MatSort, MatTable } from '@angular/material';
-import { ArrayTableMediator, Columns, MatTableMediator } from 'ngx-mat-table-mediator';
+import { MatPaginator, MatSort, MatTable, SortDirection } from '@angular/material';
+import {
+  Column,
+  Columns,
+  MatTableMediator,
+  MediatorData,
+  prepareMediatorData,
+  SimpleTableMediator,
+  transformToMediatorData
+} from 'ngx-mat-table-mediator';
 import { combineLatest, fromEvent, interval, Observable, of } from 'rxjs';
 import { debounceTime, map, startWith, tap } from 'rxjs/operators';
 import { JsonPlaceholderComment } from '../models';
@@ -42,17 +50,30 @@ export class JsonPlaceholderTypingComponent implements AfterViewInit {
       map(([query]) => query)
     );
 
-    const fetchFn = (payload: string): Observable<Array<JsonPlaceholderComment>> => {
-      return !!payload && payload.length > 0
-        ? this.http.get<Array<JsonPlaceholderComment>>(
-            `https://jsonplaceholder.typicode.com/comments?postId=${payload}`
-          )
-        : this.http.get<Array<JsonPlaceholderComment>>(
-            `https://jsonplaceholder.typicode.com/comments`
-          );
+    const fetchFn = (
+      payload: string,
+      sortBy: Column<JsonPlaceholderComment>,
+      sortDirection: SortDirection,
+      pageIndex: number,
+      pageSize: number
+    ): Observable<MediatorData<JsonPlaceholderComment>> => {
+      const base$ =
+        !!payload && payload.length > 0
+          ? this.http.get<Array<JsonPlaceholderComment>>(
+              `https://jsonplaceholder.typicode.com/comments?postId=${payload}`
+            )
+          : this.http.get<Array<JsonPlaceholderComment>>(
+              `https://jsonplaceholder.typicode.com/comments`
+            );
+
+      return base$.pipe(
+        map(rawData =>
+          prepareMediatorData(rawData, sortBy, sortDirection, pageIndex, pageSize)
+        )
+      );
     };
 
-    this.mediator = new ArrayTableMediator(
+    this.mediator = new SimpleTableMediator<string, JsonPlaceholderComment>(
       fetchFn,
       this.trigger$,
       this.table,
