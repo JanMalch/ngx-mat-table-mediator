@@ -1,6 +1,6 @@
 {
   "name": "ngx-mat-table-mediator",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Library to simplify Angular's mat-table usage",
   "scripts": {
     "ng": "ng",
