@@ -148,15 +148,14 @@
 				<pre><code class="language-typescript"><span class="hljs-meta">@Component</span>({
   selector: <span class="hljs-string">'app-minimal'</span>,
   template: MTM_TABLE_SORT_PAGINATOR_TMPL, <span class="hljs-comment">// template with table, sort and paginator</span>
-  styleUrls: [<span class="hljs-string">'./minimal.component.css'</span>],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: [<span class="hljs-string">'./minimal.component.css'</span>]
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MinimalComponent <span class="hljs-keyword">extends</span> MediatedTableComponent&lt;<span class="hljs-built_in">void</span>, Person&gt;
   <span class="hljs-keyword">implements</span> AfterViewInit, OnDestroy {
   columns: Columns&lt;Person&gt; = [<span class="hljs-string">'name'</span>, <span class="hljs-string">'age'</span>];
 
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> http: HttpClient</span>) {
-    <span class="hljs-keyword">super</span>(SimpleTableMediator);
+    <span class="hljs-keyword">super</span>();
   }
 
   fetch(
@@ -185,19 +184,19 @@
 						<a href="globals.html"><em>Globals</em></a>
 					</li>
 					<li class=" tsd-kind-external-module">
+						<a href="modules/_functions_.html">"functions"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
 						<a href="modules/_mat_table_mediator_.html">"mat-<wbr>table.mediator"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_mediated_table_component_.html">"mediated-<wbr>table.component"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_mediators_array_mediator_.html">"mediators/array.mediator"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_mediators_simple_mediator_.html">"mediators/simple.mediator"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
 						<a href="modules/_models_.html">"models"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_simple_mediator_.html">"simple.mediator"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_templates_.html">"templates"</a>

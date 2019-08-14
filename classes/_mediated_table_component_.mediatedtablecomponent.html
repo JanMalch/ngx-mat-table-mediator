@@ -161,13 +161,13 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-protected">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Mediated<wbr>Table<wbr>Component<span class="tsd-signature-symbol">(</span>mediatorClass<span class="tsd-signature-symbol">: </span><a href="../modules/_models_.html#newable" class="tsd-signature-type">Newable</a><span class="tsd-signature-symbol">&lt;</span><a href="_mat_table_mediator_.mattablemediator.html" class="tsd-signature-type">MatTableMediator</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">F</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span>, initialIsLoading<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_mediated_table_component_.mediatedtablecomponent.html" class="tsd-signature-type">MediatedTableComponent</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Mediated<wbr>Table<wbr>Component<span class="tsd-signature-symbol">(</span>initialIsLoading<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, mediatorClass<span class="tsd-signature-symbol">?: </span><a href="../modules/_models_.html#newable" class="tsd-signature-type">Newable</a><span class="tsd-signature-symbol">&lt;</span><a href="_mat_table_mediator_.mattablemediator.html" class="tsd-signature-type">MatTableMediator</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">F</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_mediated_table_component_.mediatedtablecomponent.html" class="tsd-signature-type">MediatedTableComponent</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/d957363/src/lib/mediated-table.component.ts#L55">mediated-table.component.ts:55</a></li>
+									<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/cc37ff4/src/lib/mediated-table.component.ts#L63">mediated-table.component.ts:63</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -180,18 +180,18 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>mediatorClass: <a href="../modules/_models_.html#newable" class="tsd-signature-type">Newable</a><span class="tsd-signature-symbol">&lt;</span><a href="_mat_table_mediator_.mattablemediator.html" class="tsd-signature-type">MatTableMediator</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">F</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<div class="lead">
-											<p>Class of the Mediator to use</p>
-										</div>
-									</div>
-								</li>
-								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> initialIsLoading: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;true</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<div class="lead">
 											<p>the initial value for isLoading$</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> mediatorClass: <a href="../modules/_models_.html#newable" class="tsd-signature-type">Newable</a><span class="tsd-signature-symbol">&lt;</span><a href="_mat_table_mediator_.mattablemediator.html" class="tsd-signature-type">MatTableMediator</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">F</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;SimpleTableMediator</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>Class of the Mediator to use</p>
 										</div>
 									</div>
 								</li>
@@ -209,7 +209,7 @@
 					<div class="tsd-signature tsd-kind-icon">columns<span class="tsd-signature-symbol">:</span> <a href="../modules/_models_.html#columns" class="tsd-signature-type">Columns</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/d957363/src/lib/mediated-table.component.ts#L55">mediated-table.component.ts:55</a></li>
+							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/cc37ff4/src/lib/mediated-table.component.ts#L63">mediated-table.component.ts:63</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -229,7 +229,7 @@
 					<div class="tsd-signature tsd-kind-icon">is<wbr>Loading$<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/d957363/src/lib/mediated-table.component.ts#L45">mediated-table.component.ts:45</a></li>
+							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/cc37ff4/src/lib/mediated-table.component.ts#L53">mediated-table.component.ts:53</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -245,7 +245,7 @@
 					<div class="tsd-signature tsd-kind-icon">mediator<span class="tsd-signature-symbol">:</span> <a href="_mat_table_mediator_.mattablemediator.html" class="tsd-signature-type">MatTableMediator</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">F</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/d957363/src/lib/mediated-table.component.ts#L36">mediated-table.component.ts:36</a></li>
+							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/cc37ff4/src/lib/mediated-table.component.ts#L44">mediated-table.component.ts:44</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -260,7 +260,7 @@
 					<div class="tsd-signature tsd-kind-icon">mediator<wbr>Class<span class="tsd-signature-symbol">:</span> <a href="../modules/_models_.html#newable" class="tsd-signature-type">Newable</a><span class="tsd-signature-symbol">&lt;</span><a href="_mat_table_mediator_.mattablemediator.html" class="tsd-signature-type">MatTableMediator</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">F</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/d957363/src/lib/mediated-table.component.ts#L65">mediated-table.component.ts:65</a></li>
+							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/cc37ff4/src/lib/mediated-table.component.ts#L74">mediated-table.component.ts:74</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -275,7 +275,7 @@
 					<div class="tsd-signature tsd-kind-icon">mediator<wbr>Config<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_models_.mediatorconfig.html" class="tsd-signature-type">MediatorConfig</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/d957363/src/lib/mediated-table.component.ts#L40">mediated-table.component.ts:40</a></li>
+							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/cc37ff4/src/lib/mediated-table.component.ts#L48">mediated-table.component.ts:48</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -290,7 +290,7 @@
 					<div class="tsd-signature tsd-kind-icon">paginator<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">MatPaginator</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/d957363/src/lib/mediated-table.component.ts#L26">mediated-table.component.ts:26</a></li>
+							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/cc37ff4/src/lib/mediated-table.component.ts#L34">mediated-table.component.ts:34</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -306,7 +306,7 @@
 					<div class="tsd-signature tsd-kind-icon">sort<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">MatSort</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/d957363/src/lib/mediated-table.component.ts#L31">mediated-table.component.ts:31</a></li>
+							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/cc37ff4/src/lib/mediated-table.component.ts#L39">mediated-table.component.ts:39</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -322,7 +322,7 @@
 					<div class="tsd-signature tsd-kind-icon">table<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">MatTable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/d957363/src/lib/mediated-table.component.ts#L21">mediated-table.component.ts:21</a></li>
+							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/cc37ff4/src/lib/mediated-table.component.ts#L29">mediated-table.component.ts:29</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -337,7 +337,7 @@
 					<div class="tsd-signature tsd-kind-icon">trigger$<span class="tsd-signature-symbol">:</span> <a href="../modules/_models_.html#triggerpayload" class="tsd-signature-type">TriggerPayload</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">F</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;of(undefined)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/d957363/src/lib/mediated-table.component.ts#L49">mediated-table.component.ts:49</a></li>
+							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/cc37ff4/src/lib/mediated-table.component.ts#L57">mediated-table.component.ts:57</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -353,13 +353,13 @@
 					<a name="fetch" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> fetch</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">fetch<span class="tsd-signature-symbol">(</span>payload<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">F</span>, sortBy<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, sortDirection<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">SortDirection</span>, pageIndex<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, pageSize<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_models_.mediatordata.html" class="tsd-signature-type">MediatorData</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">fetch<span class="tsd-signature-symbol">(</span>payload<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">F</span>, sortBy<span class="tsd-signature-symbol">?: </span><a href="../modules/_models_.html#column" class="tsd-signature-type">Column</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span>, sortDirection<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">SortDirection</span>, pageIndex<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, pageSize<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_models_.mediatordata.html" class="tsd-signature-type">MediatorData</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/d957363/src/lib/mediated-table.component.ts#L79">mediated-table.component.ts:79</a></li>
+									<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/cc37ff4/src/lib/mediated-table.component.ts#L87">mediated-table.component.ts:87</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -376,7 +376,7 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> sortBy: <span class="tsd-signature-type">string</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> sortBy: <a href="../modules/_models_.html#column" class="tsd-signature-type">Column</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>the current column id that is sorted by</p>
 									</div>
@@ -400,7 +400,7 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_models_.mediatordata.html" class="tsd-signature-type">MediatorData</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_models_.mediatordata.html" class="tsd-signature-type">MediatorData</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -414,7 +414,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/d957363/src/lib/mediated-table.component.ts#L108">mediated-table.component.ts:108</a></li>
+									<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/cc37ff4/src/lib/mediated-table.component.ts#L116">mediated-table.component.ts:116</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -438,7 +438,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/d957363/src/lib/mediated-table.component.ts#L99">mediated-table.component.ts:99</a></li>
+									<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/cc37ff4/src/lib/mediated-table.component.ts#L107">mediated-table.component.ts:107</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -462,7 +462,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/d957363/src/lib/mediated-table.component.ts#L90">mediated-table.component.ts:90</a></li>
+									<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/cc37ff4/src/lib/mediated-table.component.ts#L98">mediated-table.component.ts:98</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -484,7 +484,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/d957363/src/lib/mediated-table.component.ts#L125">mediated-table.component.ts:125</a></li>
+									<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/cc37ff4/src/lib/mediated-table.component.ts#L133">mediated-table.component.ts:133</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -505,19 +505,19 @@
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class=" tsd-kind-external-module">
+						<a href="../modules/_functions_.html">"functions"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
 						<a href="../modules/_mat_table_mediator_.html">"mat-<wbr>table.mediator"</a>
 					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/_mediated_table_component_.html">"mediated-<wbr>table.component"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_mediators_array_mediator_.html">"mediators/array.mediator"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_mediators_simple_mediator_.html">"mediators/simple.mediator"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
 						<a href="../modules/_models_.html">"models"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_simple_mediator_.html">"simple.mediator"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_templates_.html">"templates"</a>

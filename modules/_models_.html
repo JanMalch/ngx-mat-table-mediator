@@ -80,10 +80,9 @@
 						<section class="tsd-index-section ">
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_models_.html#arrayfetchfunction" class="tsd-kind-icon">Array<wbr>Fetch<wbr>Function</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_models_.html#column" class="tsd-kind-icon">Column</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_models_.html#columns" class="tsd-kind-icon">Columns</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_models_.html#fetchfunction" class="tsd-kind-icon">Fetch<wbr>Function</a></li>
-								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_models_.html#mediatedfetchfunction" class="tsd-kind-icon">Mediated<wbr>Fetch<wbr>Function</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_models_.html#newable" class="tsd-kind-icon">Newable</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_models_.html#triggerpayload" class="tsd-kind-icon">Trigger<wbr>Payload</a></li>
 							</ul>
@@ -94,36 +93,26 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Type aliases</h2>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter">
-					<a name="arrayfetchfunction" class="tsd-anchor"></a>
-					<h3>Array<wbr>Fetch<wbr>Function</h3>
-					<div class="tsd-signature tsd-kind-icon">Array<wbr>Fetch<wbr>Function&lt;F, O&gt;<span class="tsd-signature-symbol">:</span> <a href="_models_.html#fetchfunction" class="tsd-signature-type">FetchFunction</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">F</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="column" class="tsd-anchor"></a>
+					<h3>Column</h3>
+					<div class="tsd-signature tsd-kind-icon">Column&lt;O&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">keyof O</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/d957363/src/lib/models.ts#L41">models.ts:41</a></li>
+							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/cc37ff4/src/lib/models.ts#L72">models.ts:72</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Type alias for a function that fetches the data for the table
-								and returns objects of type <code>Array&lt;O&gt;</code>. The data still has to be mapped to
-							<code>MediatorData</code> in a later step.</p>
+							<p>alias for a single key of O</p>
 						</div>
 					</div>
 					<h4 class="tsd-type-parameters-title">Type parameters</h4>
 					<ul class="tsd-type-parameters">
 						<li>
-							<h4>F</h4>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>type of the trigger payload, same <F> as the mediator&#39;s</p>
-								</div>
-							</div>
-						</li>
-						<li>
 							<h4>O</h4>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>type of the data, same <O> as the mediator&#39;s</p>
+									<p>type of the array with the table data, same <O> as the mediator&#39;s</p>
 								</div>
 							</div>
 						</li>
@@ -132,10 +121,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter">
 					<a name="columns" class="tsd-anchor"></a>
 					<h3>Columns</h3>
-					<div class="tsd-signature tsd-kind-icon">Columns&lt;O&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">keyof O</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">Columns&lt;O&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="_models_.html#column" class="tsd-signature-type">Column</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/d957363/src/lib/models.ts#L83">models.ts:83</a></li>
+							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/cc37ff4/src/lib/models.ts#L66">models.ts:66</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -161,7 +150,7 @@
 					<div class="tsd-signature tsd-kind-icon">Fetch<wbr>Function&lt;F, O&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/d957363/src/lib/models.ts#L18">models.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/cc37ff4/src/lib/models.ts#L18">models.ts:18</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -195,7 +184,7 @@
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter-siganture">
 								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>payload<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">F</span>, sortBy<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, sortDirection<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">SortDirection</span>, pageIndex<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, pageSize<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span></li>
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>payload<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">F</span>, sortBy<span class="tsd-signature-symbol">?: </span><a href="_models_.html#column" class="tsd-signature-type">Column</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span>, sortDirection<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">SortDirection</span>, pageIndex<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, pageSize<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_models_.mediatordata.html" class="tsd-signature-type">MediatorData</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
@@ -205,7 +194,7 @@
 												<h5><span class="tsd-flag ts-flagOptional">Optional</span> payload: <span class="tsd-signature-type">F</span></h5>
 											</li>
 											<li>
-												<h5><span class="tsd-flag ts-flagOptional">Optional</span> sortBy: <span class="tsd-signature-type">string</span></h5>
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> sortBy: <a href="_models_.html#column" class="tsd-signature-type">Column</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span></h5>
 											</li>
 											<li>
 												<h5><span class="tsd-flag ts-flagOptional">Optional</span> sortDirection: <span class="tsd-signature-type">SortDirection</span></h5>
@@ -217,7 +206,7 @@
 												<h5><span class="tsd-flag ts-flagOptional">Optional</span> pageSize: <span class="tsd-signature-type">number</span></h5>
 											</li>
 										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span></h4>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_models_.mediatordata.html" class="tsd-signature-type">MediatorData</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
 									</li>
 								</ul>
 							</li>
@@ -225,47 +214,12 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter">
-					<a name="mediatedfetchfunction" class="tsd-anchor"></a>
-					<h3>Mediated<wbr>Fetch<wbr>Function</h3>
-					<div class="tsd-signature tsd-kind-icon">Mediated<wbr>Fetch<wbr>Function&lt;F, O&gt;<span class="tsd-signature-symbol">:</span> <a href="_models_.html#fetchfunction" class="tsd-signature-type">FetchFunction</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">F</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/_models_.mediatordata.html" class="tsd-signature-type">MediatorData</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/d957363/src/lib/models.ts#L32">models.ts:32</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Type alias for a function that fetches the data for the table
-							and returns objects of type <code>MediatorData&lt;O&gt;</code>.</p>
-						</div>
-					</div>
-					<h4 class="tsd-type-parameters-title">Type parameters</h4>
-					<ul class="tsd-type-parameters">
-						<li>
-							<h4>F</h4>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>type of the trigger payload, same <F> as the mediator&#39;s</p>
-								</div>
-							</div>
-						</li>
-						<li>
-							<h4>O</h4>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>type of the data, same <O> as the mediator&#39;s</p>
-								</div>
-							</div>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter">
 					<a name="newable" class="tsd-anchor"></a>
 					<h3>Newable</h3>
 					<div class="tsd-signature tsd-kind-icon">Newable&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/d957363/src/lib/models.ts#L77">models.ts:77</a></li>
+							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/cc37ff4/src/lib/models.ts#L60">models.ts:60</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -291,7 +245,7 @@
 					<div class="tsd-signature tsd-kind-icon">Trigger<wbr>Payload&lt;F&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">F</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/d957363/src/lib/models.ts#L9">models.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/JanMalch/ngx-mat-table-mediator/blob/cc37ff4/src/lib/models.ts#L9">models.ts:9</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -320,19 +274,19 @@
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class=" tsd-kind-external-module">
+						<a href="_functions_.html">"functions"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
 						<a href="_mat_table_mediator_.html">"mat-<wbr>table.mediator"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="_mediated_table_component_.html">"mediated-<wbr>table.component"</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_mediators_array_mediator_.html">"mediators/array.mediator"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_mediators_simple_mediator_.html">"mediators/simple.mediator"</a>
-					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="_models_.html">"models"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_simple_mediator_.html">"simple.mediator"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="_templates_.html">"templates"</a>
@@ -348,16 +302,13 @@
 						<a href="../interfaces/_models_.mediatordata.html" class="tsd-kind-icon">Mediator<wbr>Data</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter">
-						<a href="_models_.html#arrayfetchfunction" class="tsd-kind-icon">Array<wbr>Fetch<wbr>Function</a>
+						<a href="_models_.html#column" class="tsd-kind-icon">Column</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter">
 						<a href="_models_.html#columns" class="tsd-kind-icon">Columns</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter">
 						<a href="_models_.html#fetchfunction" class="tsd-kind-icon">Fetch<wbr>Function</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter">
-						<a href="_models_.html#mediatedfetchfunction" class="tsd-kind-icon">Mediated<wbr>Fetch<wbr>Function</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter">
 						<a href="_models_.html#newable" class="tsd-kind-icon">Newable</a>
