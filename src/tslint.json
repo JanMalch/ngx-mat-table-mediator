@@ -4,14 +4,18 @@
     "directive-selector": [
       true,
       "attribute",
-      "lib",
+      "mtm",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      "lib",
+      "mtm",
       "kebab-case"
+    ],
+    "import-blacklist": [
+      true,
+      "ngx-mat-table-mediator"
     ]
   }
 }
