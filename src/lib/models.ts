@@ -34,32 +34,6 @@ export interface MediatorData<O> {
 }
 
 /**
- * Config object to configure a table mediator.
- * @typeparam T entity type for the `TrackByFunction`
- * @see [[MatTableMediator.DEFAULT_CONFIG]]
- * @see [TrackByFunction](https://angular.io/api/core/TrackByFunction)
- */
-export interface MediatorConfig<T> {
-  /**
-   * `trackBy` function for the table
-   */
-  trackByFn: TrackByFunction<T>;
-  /**
-   * number of retry attempts for the `fetch` function
-   */
-  attempts: number;
-  /**
-   * `debounce` time for the `isLoading$` observable
-   */
-  debounceLoading: number;
-}
-
-/**
- * alias for a type with a constructor
- */
-export type Newable<T> = new (...args: any[]) => T;
-
-/**
  * alias for an array with keys of O
  * @typeparam O type of the array with the table data, same <O> as the mediator's
  */

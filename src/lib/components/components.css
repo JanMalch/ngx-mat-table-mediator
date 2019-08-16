@@ -1,0 +1,39 @@
+.mtm-container {
+  position: relative;
+  border: 1px solid rgba(0,0,0,.12);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.mtm-container.min-height {
+  min-height: 200px;
+}
+
+.mtm-table {
+  width: 100%;
+}
+
+.mtm-container .mtm-table .mat-checkbox {
+  margin-right: 16px;
+}
+
+.mtm-container .mtm-loading.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 56px;
+  right: 0;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mtm-container .mtm-loading.bar {
+  position: absolute;
+  z-index: 1;
+  top: 52px;
+  left: 0;
+  right: 0;
+}

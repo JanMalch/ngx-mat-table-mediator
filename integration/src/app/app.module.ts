@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import {
   MatButtonModule,
   MatPaginatorModule,
+  MatProgressBarModule,
   MatProgressSpinnerModule,
   MatSnackBarModule,
   MatSortModule,
@@ -11,30 +12,17 @@ import {
 } from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MtmTableSortPaginatorModule } from 'ngx-mat-table-mediator';
 
 import { AppComponent } from './app.component';
-import { CustomComponent } from './custom/custom.component';
 import { MinimalComponent } from './minimal/minimal.component';
-import { GithubFetchComponent } from './github-fetch/github-fetch.component';
-import { GithubFetchImmediateComponent } from './github-fetch-immediate/github-fetch-immediate.component';
-import { CustomConfigComponent } from './custom-config/custom-config.component';
-import { JsonPlaceholderComponent } from './json-placeholder/json-placeholder.component';
-import { JsonPlaceholderTypingComponent } from './json-placeholder-typing/json-placeholder-typing.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    CustomComponent,
-    MinimalComponent,
-    GithubFetchComponent,
-    GithubFetchImmediateComponent,
-    CustomConfigComponent,
-    JsonPlaceholderComponent,
-    JsonPlaceholderTypingComponent
-  ],
+  declarations: [AppComponent, MinimalComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    MtmTableSortPaginatorModule,
     MatTabsModule,
     MatButtonModule,
     HttpClientModule,
@@ -42,6 +30,7 @@ import { JsonPlaceholderTypingComponent } from './json-placeholder-typing/json-p
     MatPaginatorModule,
     MatSortModule,
     MatProgressSpinnerModule,
+    MatProgressBarModule,
     MatSnackBarModule
   ],
   providers: [],

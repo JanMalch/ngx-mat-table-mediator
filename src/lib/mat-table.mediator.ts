@@ -7,6 +7,7 @@ import {
   Sort,
   SortDirection
 } from '@angular/material';
+import { instanceOfMediatorData } from './functions';
 import { BehaviorSubject, combineLatest, merge, Observable, of, Subject } from 'rxjs';
 import {
   catchError,
@@ -18,8 +19,8 @@ import {
   startWith,
   takeUntil
 } from 'rxjs/operators';
-import { instanceOfMediatorData } from './functions';
-import { Column, MediatorConfig, MediatorData, TriggerPayload } from './models';
+import { MediatorConfiguration } from './di/mediator.configuration';
+import { Column, MediatorData, TriggerPayload } from './models';
 
 // tslint:disable:variable-name
 /**
@@ -39,24 +40,7 @@ import { Column, MediatorConfig, MediatorData, TriggerPayload } from './models';
  * @see [[start]]
  */
 // @dynamic
-export abstract class MatTableMediator<F, O> implements OnDestroy {
-  /**
-   * The default config for mediators.
-   * ```typescript
-   * {
-   *   trackByFn: index => index, // track by index
-   *   attempts: 0,               // do not retry
-   *   debounceLoading: 150       // debounce loading indicator by 150ms
-   * }
-   * ```
-   * @see [[MediatorConfig]]
-   */
-  static readonly DEFAULT_CONFIG: MediatorConfig<any> = {
-    trackByFn: index => index,
-    attempts: 0,
-    debounceLoading: 150
-  };
-
+export class MatTableMediator<F, O> implements OnDestroy {
   /**
    * A subject for cleanups. Will be called and completed by the `ngOnDestroy` method.
    * @see [[ngOnDestroy]]
@@ -102,31 +86,25 @@ export abstract class MatTableMediator<F, O> implements OnDestroy {
    * protected trigger$ = new ReplaySubject<any>(1); // only on a button click
    * protected trigger$ = new BehaviourSubject<any>(undefined); // start instantly and on every other button click
    */
-  protected abstract get trigger$(): TriggerPayload<F>;
-
-  /**
-   * A frozen `MediatorConfig`, put together in the constructor.
-   * By default the `MatTableMediator.DEFAULT_CONFIG` values will be used.
-   * @see [[MatTableMediator.DEFAULT_CONFIG]]
-   */
-  protected readonly config: MediatorConfig<O>;
+  protected get trigger$(): TriggerPayload<F> {
+    return this.configuration.payload$;
+  }
 
   /**
    * Creates a new instance of a MatTableFetchMediator and calls its `ngOnInit` function.
    * @see [[MatTableMediator]]
+   * @param configuration configuration for the mediator itself
    * @param table Reference to the MatTable
    * @param paginator Reference to the MatPaginator
    * @param sort Reference to the MatSort
-   * @param [config={}] An optional config object
    */
-  protected constructor(
+  constructor(
+    protected readonly configuration: MediatorConfiguration<F, O>,
     protected readonly table: MatTable<O>,
     protected readonly paginator?: MatPaginator,
-    protected readonly sort?: MatSort,
-    config: Partial<MediatorConfig<O>> = {}
+    protected readonly sort?: MatSort
   ) {
-    this.config = Object.freeze({ ...MatTableMediator.DEFAULT_CONFIG, ...config });
-    this.table.trackBy = this.config.trackByFn;
+    this.table.trackBy = this.configuration.trackByFn;
   }
 
   /**
@@ -206,13 +184,15 @@ export abstract class MatTableMediator<F, O> implements OnDestroy {
    * @param pageIndex the current page the user is on
    * @param pageSize the given page size by the user
    */
-  abstract fetch(
+  fetch(
     payload?: F,
     sortBy?: Column<O>,
     sortDirection?: SortDirection,
     pageIndex?: number,
     pageSize?: number
-  ): Observable<MediatorData<O>>;
+  ): Observable<MediatorData<O>> {
+    return this.configuration.fetch(payload, sortBy, sortDirection, pageIndex, pageSize);
+  }
 
   /**
    * This function creates an internal observable to reset the paginator.
@@ -229,6 +209,7 @@ export abstract class MatTableMediator<F, O> implements OnDestroy {
    * It merges the relevant observables, starts the fetch function and maps the values to fit the mediator's needs.
    */
   protected createDataFetch(): Observable<MediatorData<O>> {
+    // @ts-ignore
     return combineLatest(this.trigger$, this.sortChange$, this.page$).pipe(
       takeUntil(this._destroy$),
       mergeMap(([payload]) => {
@@ -241,7 +222,7 @@ export abstract class MatTableMediator<F, O> implements OnDestroy {
           this.pageIndex,
           this.pageSize
         ).pipe(
-          retry(this.config.attempts),
+          retry(this.configuration.attempts),
           catchError(err => this.handleError(err))
         );
       })
@@ -326,10 +307,10 @@ export abstract class MatTableMediator<F, O> implements OnDestroy {
    */
   get isLoading$(): Observable<boolean> {
     const obs$ = this._loading$.asObservable();
-    if (this.config.debounceLoading <= 0) {
+    if (this.configuration.debounceLoading <= 0) {
       return obs$;
     } else {
-      return obs$.pipe(debounceTime(this.config.debounceLoading));
+      return obs$.pipe(debounceTime(this.configuration.debounceLoading));
     }
   }
 

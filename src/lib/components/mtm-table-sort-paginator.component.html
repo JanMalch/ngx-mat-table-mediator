@@ -1,0 +1,49 @@
+<div class="mtm-container">
+  <div
+    *ngIf="withLoadingIndicator && (isLoading$ | async)"
+    [class]="'mtm-loading ' + marker.containerCssClass"
+  >
+    <ng-content select="[mtmLoader]"></ng-content>
+  </div>
+
+  <table
+    mat-table
+    class="mtm-table"
+    matSort
+    [matSortDisabled]="!sortable"
+    [matSortActive]="sortable ? columns[0] : undefined"
+    matSortDisableClear
+    [matSortDirection]="sortable ? 'asc' : undefined"
+  >
+    <ng-container matColumnDef="mtm-select">
+      <th mat-header-cell *matHeaderCellDef>
+        <mat-checkbox
+          (change)="$event ? masterToggle() : null"
+          [checked]="selection.hasValue() && isAllSelected()"
+          [indeterminate]="selection.hasValue() && !isAllSelected()"
+          [aria-label]="checkboxLabel()"
+        >
+        </mat-checkbox>
+      </th>
+      <td mat-cell *matCellDef="let row">
+        <mat-checkbox
+          (click)="$event.stopPropagation()"
+          (change)="$event ? selectRow(row) : null"
+          [checked]="selection.isSelected(row)"
+          [aria-label]="checkboxLabel(row)"
+        >
+        </mat-checkbox>
+      </td>
+    </ng-container>
+
+    <ng-container *ngFor="let col of columns" [matColumnDef]="col">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>{{ labels[col] }}</th>
+      <td mat-cell *matCellDef="let row">{{ row[col] }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="allColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: allColumns"></tr>
+  </table>
+
+  <ng-content select="mat-paginator"></ng-content>
+</div>
