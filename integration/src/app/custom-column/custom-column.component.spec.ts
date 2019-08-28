@@ -1,11 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { AppModule } from '../app.module';
 
-import { CustomComponent } from './custom.component';
+import { CustomColumnComponent } from './custom-column.component';
 
-describe('CustomComponent', () => {
-  let component: CustomComponent;
-  let fixture: ComponentFixture<CustomComponent>;
+describe('CustomColumnComponent', () => {
+  let component: CustomColumnComponent;
+  let fixture: ComponentFixture<CustomColumnComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -14,7 +14,7 @@ describe('CustomComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CustomComponent);
+    fixture = TestBed.createComponent(CustomColumnComponent);
     component = fixture.componentInstance;
     fixture.detectChanges(false);
   });

@@ -63,7 +63,8 @@
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "integration/src/styles.css"
+              "integration/src/styles.css",
+              "src/lib/components/mtm-theme.css"
             ],
             "scripts": []
           },
@@ -124,7 +125,8 @@
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "integration/src/styles.css"
+              "integration/src/styles.css",
+              "src/lib/components/mtm-theme.css"
             ],
             "scripts": []
           }

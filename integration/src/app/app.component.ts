@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   readonly prefix =
-    'https://github.com/JanMalch/ngx-mat-table-mediator/tree/master/integration/src/app/';
+    'https://github.com/JanMalch/ngx-mat-table-mediator/blob/master/integration/src/app/';
 }

@@ -38,14 +38,28 @@ export class MinimalMediatorConfig extends MediatorConfiguration<
 }
 
 @Component({
-  selector: 'app-minimal',
+  selector: 'app-custom-column',
   template: `
     <mtm-table
       [sortable]="true"
       columns="postId, id, name, email"
       labels="Post, ID, Name, Email"
-      [allColumns]="['postId', 'id', 'name', 'email']"
+      [allColumns]="['postId', 'id', 'name', 'action', 'email']"
     >
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let row">
+          <a
+            mat-icon-button
+            class="mat-hint"
+            [href]="'mailto:' + row.email"
+            [title]="'Mail to ' + row.email"
+          >
+            <mat-icon>email</mat-icon>
+          </a>
+        </td>
+      </ng-container>
+
       <mat-spinner mode="indeterminate" mtmLoader="backdrop"></mat-spinner>
       <mat-paginator
         [pageSizeOptions]="[10, 25, 50, 100]"
@@ -54,7 +68,7 @@ export class MinimalMediatorConfig extends MediatorConfiguration<
       ></mat-paginator>
     </mtm-table>
   `,
-  styleUrls: ['./minimal.component.css'],
+  styleUrls: ['./custom-column.component.css'],
   providers: [{ provide: MediatorConfiguration, useClass: MinimalMediatorConfig }]
 })
-export class MinimalComponent {}
+export class CustomColumnComponent {}

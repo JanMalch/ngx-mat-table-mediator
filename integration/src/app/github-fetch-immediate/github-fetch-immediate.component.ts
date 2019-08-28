@@ -1,53 +1,37 @@
 import { HttpClient } from '@angular/common/http';
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component, Injectable } from '@angular/core';
 import { SortDirection } from '@angular/material';
 import {
   Column,
   Columns,
   MediatedTableComponent,
+  MediatorConfiguration,
   MediatorData,
-  SimpleTableMediator
+  MediatorProxy
 } from 'ngx-mat-table-mediator';
-import { BehaviorSubject, Observable, ReplaySubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { GithubApi, GithubIssue } from '../models';
 
-@Component({
-  selector: 'app-github-fetch-immediate',
-  templateUrl: './github-fetch-immediate.component.html',
-  styleUrls: ['./github-fetch-immediate.component.css']
-})
-export class GithubFetchImmediateComponent extends MediatedTableComponent<any, GithubIssue>
-  implements AfterViewInit {
-  columnLabels: { [column in keyof GithubIssue]: string } = {
-    created_at: 'Created at',
-    state: 'State',
-    number: 'Number',
-    title: 'Title'
-  };
-
-  columns = Object.keys(this.columnLabels) as Columns<GithubIssue>;
-  trigger$ = new BehaviorSubject<any>(undefined);
-
-  isRateLimitReached$ = new BehaviorSubject<boolean>(false); // loading starts instantly, use super(SimpleTableMediator, true);
+@Injectable()
+export class GithubFetchMediatorConfig extends MediatorConfiguration<void, GithubIssue> {
+  readonly payload$ = new BehaviorSubject<void>(undefined);
+  debounceLoading = 0;
 
   constructor(private http: HttpClient) {
     super();
   }
 
-  ngAfterViewInit(): void {
-    this.initMediatorAsync().then(() => {
-      this.mediator.error$.subscribe(() => this.isRateLimitReached$.next(true));
-      this.mediator.onFetchBegin$.subscribe(() => this.isRateLimitReached$.next(false));
-    });
+  trigger() {
+    this.payload$.next(undefined);
   }
 
   fetch(
-    payload: undefined,
-    sortBy: Column<GithubIssue>,
-    sortDirection: SortDirection,
-    pageIndex: number,
-    pageSize: number
+    payload?: void,
+    sortBy?: Column<GithubIssue>,
+    sortDirection?: SortDirection,
+    pageIndex?: number,
+    pageSize?: number
   ): Observable<MediatorData<GithubIssue>> {
     const href = 'https://api.github.com/search/issues';
     const requestUrl = `${href}?q=repo:angular/components&sort=${sortBy}&order=${sortDirection}&page=${pageIndex +
@@ -59,5 +43,33 @@ export class GithubFetchImmediateComponent extends MediatedTableComponent<any, G
         total: response.total_count
       }))
     );
+  }
+}
+
+@Component({
+  selector: 'app-github-fetch-immediate',
+  templateUrl: './github-fetch-immediate.component.html',
+  styleUrls: ['./github-fetch-immediate.component.css'],
+  providers: [
+    { provide: MediatorConfiguration, useClass: GithubFetchMediatorConfig },
+    MediatorProxy
+  ]
+})
+export class GithubFetchImmediateComponent extends MediatedTableComponent<void, GithubIssue> {
+  isRateLimitReached$ = new BehaviorSubject<boolean>(false);
+
+  columnLabels: { [column in keyof GithubIssue]: string } = {
+    created_at: 'Created at',
+    state: 'State',
+    number: 'Number',
+    title: 'Title'
+  };
+  columns = Object.keys(this.columnLabels) as Columns<GithubIssue>;
+
+  constructor(
+    public config: MediatorConfiguration<void, GithubIssue>,
+    public proxy: MediatorProxy<void, GithubIssue>
+  ) {
+    super();
   }
 }

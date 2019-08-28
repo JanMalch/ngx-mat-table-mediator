@@ -1,4 +1,4 @@
-import { MediatorData, prepareMediatorData } from '../public-api';
+import { filterMediatorData, MediatorData, prepareMediatorData } from '../public-api';
 
 describe('prepareMediatorData', () => {
   it('should paginate', () => {
@@ -39,6 +39,22 @@ describe('prepareMediatorData', () => {
     const expected: MediatorData<string> = {
       data: ['A', 'B', 'C', 'D', 'E', 'F'],
       total: 6
+    };
+    expect(actual).toEqual(expected);
+  });
+});
+
+describe('filterMediatorData', () => {
+  it('should return a filter function', () => {
+    const mediatorData: MediatorData<string> = {
+      data: ['A', 'B', 'C', 'D', 'E', 'F'],
+      total: 6
+    };
+    const customFilter = filterMediatorData<string>(x => x < 'D');
+    const actual = customFilter(mediatorData);
+    const expected = {
+      data: ['A', 'B', 'C'],
+      total: 3
     };
     expect(actual).toEqual(expected);
   });

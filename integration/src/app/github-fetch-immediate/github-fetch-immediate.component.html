@@ -1,8 +1,8 @@
 <button
   mat-stroked-button
   color="primary"
-  [disabled]="isLoading$ | async"
-  (click)="trigger$.next(undefined)"
+  [disabled]="proxy?.isLoading$ | async"
+  (click)="config.trigger(undefined)"
 >
   Search again
 </button>
@@ -10,9 +10,9 @@
 <div class="example-container mat-elevation-z8">
   <div
     class="example-loading-shade"
-    *ngIf="(isLoading$ | async) || (isRateLimitReached$ | async)"
+    *ngIf="(proxy?.isLoading$ | async) || (isRateLimitReached$ | async)"
   >
-    <mat-spinner *ngIf="isLoading$ | async"></mat-spinner>
+    <mat-spinner *ngIf="proxy?.isLoading$ | async"></mat-spinner>
     <div class="example-rate-limit-reached" *ngIf="isRateLimitReached$ | async">
       GitHub's API rate limit has been reached. It will be reset in one minute.
     </div>

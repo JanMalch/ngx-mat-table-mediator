@@ -1,6 +1,6 @@
 import { TrackByFunction } from '@angular/core';
 import { SortDirection } from '@angular/material';
-import { Column, MediatorData, TriggerPayload } from 'ngx-mat-table-mediator';
+import { Column, MediatorData, TriggerPayload } from '../models';
 import { Observable, of } from 'rxjs';
 
 export abstract class MediatorConfiguration<F, O> {
@@ -15,6 +15,14 @@ export abstract class MediatorConfiguration<F, O> {
     );
   }
 
+  /**
+   * The function which is used for communicating with the API.
+   * @param payload the latest trigger payload
+   * @param sortBy the currently selected column
+   * @param sortDirection `"asc"`, `"desc"` or `""`
+   * @param pageIndex the current page the user is on
+   * @param pageSize the given page size by the user
+   */
   public abstract fetch(
     payload?: F,
     sortBy?: Column<O>,

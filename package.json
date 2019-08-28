@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "serve": "ng serve integration",
-    "build": "ng build ngx-mat-table-mediator && npm run readme",
+    "build": "ng build ngx-mat-table-mediator && npm run readme && ts-node ./tools/copy-component-css",
     "build:integration": "ng build integration --prod --base-href=/ngx-mat-table-mediator-demo/",
     "build:ci": "npm run build && npm run build:integration",
     "test": "ng test ngx-mat-table-mediator --watch=false --browsers=ChromeHeadless",

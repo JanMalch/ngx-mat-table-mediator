@@ -17,6 +17,22 @@
   margin-right: 16px;
 }
 
+.mtm-hover tr td {
+  transition: background-color 0.2s;
+  will-change: background-color;
+}
+
+.mtm-hover tr:hover td {
+  background-color: #f5f5f5;
+}
+
+.mtm-table tr th.mtm-selected,
+.mtm-table tr th.mtm-selected ~ th,
+.mtm-table tr td.mtm-selected,
+.mtm-table tr td.mtm-selected ~ td {
+  background-color: rgba(255, 64, 129, 0.08);
+}
+
 .mtm-container .mtm-loading.backdrop {
   position: absolute;
   top: 0;

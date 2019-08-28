@@ -97,3 +97,17 @@ export function applySorting<O>(
 export function instanceOfMediatorData(object: any): object is MediatorData<any> {
   return object != null && typeof object === 'object' && 'data' in object && 'total' in object;
 }
+
+export type MediatorDataFilter<O> = (data: MediatorData<O>) => MediatorData<O>;
+
+export function filterMediatorData<O>(
+  predicate: (entity: O) => boolean
+): MediatorDataFilter<O> {
+  return (data: MediatorData<O>) => {
+    const filtered = data.data.filter(x => predicate(x));
+    return {
+      data: filtered,
+      total: filtered.length
+    };
+  };
+}

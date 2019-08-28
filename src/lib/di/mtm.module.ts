@@ -3,12 +3,12 @@ import { NgModule } from '@angular/core';
 import {
   MatCheckboxModule,
   MatPaginatorModule,
-  MatProgressSpinnerModule,
   MatSortModule,
   MatTableModule
 } from '@angular/material';
 import { LoadingMarkerDirective } from '../components/loading-marker.directive';
-import { MtmTableSortPaginatorComponent } from '../components/mtm-table-sort-paginator.component';
+import { MtmTableSelectableComponent } from '../components/mtm-table-selectable.component';
+import { MtmTableComponent } from '../components/mtm-table.component';
 
 @NgModule({
   imports: [
@@ -18,8 +18,8 @@ import { MtmTableSortPaginatorComponent } from '../components/mtm-table-sort-pag
     MatPaginatorModule,
     MatCheckboxModule
   ],
-  exports: [MtmTableSortPaginatorComponent, LoadingMarkerDirective],
-  declarations: [MtmTableSortPaginatorComponent, LoadingMarkerDirective],
+  exports: [MtmTableComponent, MtmTableSelectableComponent, LoadingMarkerDirective],
+  declarations: [MtmTableComponent, MtmTableSelectableComponent, LoadingMarkerDirective],
   providers: []
 })
 export class MtmTableSortPaginatorModule {}

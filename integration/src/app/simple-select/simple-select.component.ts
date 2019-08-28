@@ -12,10 +12,7 @@ import { map } from 'rxjs/operators';
 import { JsonPlaceholderComment } from '../models';
 
 @Injectable()
-export class MinimalMediatorConfig extends MediatorConfiguration<
-  void,
-  JsonPlaceholderComment
-> {
+export class SelectMediatorConfig extends MediatorConfiguration<void, JsonPlaceholderComment> {
   constructor(private http: HttpClient) {
     super();
   }
@@ -38,23 +35,32 @@ export class MinimalMediatorConfig extends MediatorConfiguration<
 }
 
 @Component({
-  selector: 'app-minimal',
+  selector: 'app-simple-select',
   template: `
-    <mtm-table
+    <p>
+      <b>Selected IDs: </b><code>{{ selected }}</code>
+    </p>
+    <mtm-selectable-table
+      (mtmSelect)="onSelect($event)"
       [sortable]="true"
       columns="postId, id, name, email"
       labels="Post, ID, Name, Email"
-      [allColumns]="['postId', 'id', 'name', 'email']"
     >
-      <mat-spinner mode="indeterminate" mtmLoader="backdrop"></mat-spinner>
+      <mat-progress-bar mode="indeterminate" mtmLoader="bar"></mat-progress-bar>
       <mat-paginator
-        [pageSizeOptions]="[10, 25, 50, 100]"
-        [pageSize]="25"
+        [pageSizeOptions]="[10]"
+        [pageSize]="10"
         showFirstLastButtons
       ></mat-paginator>
-    </mtm-table>
+    </mtm-selectable-table>
   `,
-  styleUrls: ['./minimal.component.css'],
-  providers: [{ provide: MediatorConfiguration, useClass: MinimalMediatorConfig }]
+  styleUrls: ['./simple-select.component.css'],
+  providers: [{ provide: MediatorConfiguration, useClass: SelectMediatorConfig }]
 })
-export class MinimalComponent {}
+export class SimpleSelectComponent {
+  selected = '';
+
+  onSelect(selected: JsonPlaceholderComment[]) {
+    this.selected = selected.map(c => c.id).join(', ');
+  }
+}

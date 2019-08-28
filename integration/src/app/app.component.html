@@ -48,6 +48,81 @@
       <app-minimal></app-minimal>
     </ng-template>
   </mat-tab>
+  <mat-tab label="With custom query">
+    <ng-template matTabContent>
+      <aside>
+        <a
+          [href]="prefix + 'with-query/with-query.component.ts'"
+          target="_blank"
+          mat-stroked-button
+          color="primary"
+          >Source</a
+        >
+        <p>
+          You can connect an input to the paylaod observable.
+        </p>
+      </aside>
+      <app-with-query></app-with-query>
+    </ng-template>
+  </mat-tab>
+
+  <mat-tab label="@angular/material's GitHub fetch">
+    <ng-template matTabContent>
+      <aside>
+        <a
+          [href]="prefix + 'github-fetch-immediate/github-fetch-immediate.component.ts'"
+          target="_blank"
+          mat-stroked-button
+          color="primary"
+          >Source</a
+        >
+        <p>
+          Mediator fetching data from an HTTP call. Replicates the official
+          <a href="https://material.angular.io/components/table/examples" target="_blank">
+            <b>Table retrieving data through HTTP</b></a
+          >
+          example.
+        </p>
+        <p>Fetching starts instantly and every time you click the button.</p>
+        <p>Please note that the GitHub-API is responsible for sorting.</p>
+      </aside>
+      <app-github-fetch-immediate></app-github-fetch-immediate>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="With Selection">
+    <ng-template matTabContent>
+      <aside>
+        <a
+          [href]="prefix + 'simple-select/simple-select.component.ts'"
+          target="_blank"
+          mat-stroked-button
+          color="primary"
+          >Source</a
+        >
+        <p>
+          Table with selectable data.
+        </p>
+      </aside>
+      <app-simple-select></app-simple-select>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="With custom column">
+    <ng-template matTabContent>
+      <aside>
+        <a
+          [href]="prefix + 'custom-column/custom-column.component.ts'"
+          target="_blank"
+          mat-stroked-button
+          color="primary"
+          >Source</a
+        >
+        <p>
+          Table with a custom column.
+        </p>
+      </aside>
+      <app-custom-column></app-custom-column>
+    </ng-template>
+  </mat-tab>
   <!--<mat-tab label="Custom Mediator">
     <ng-template matTabContent>
       <aside>

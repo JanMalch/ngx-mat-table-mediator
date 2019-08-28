@@ -1,11 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { AppModule } from '../app.module';
 
-import { JsonPlaceholderTypingComponent } from './json-placeholder-typing.component';
+import { WithQueryComponent } from './minimal.component';
 
-describe('JsonPlaceholderTypingComponent', () => {
-  let component: JsonPlaceholderTypingComponent;
-  let fixture: ComponentFixture<JsonPlaceholderTypingComponent>;
+describe('MinimalComponent', () => {
+  let component: MinimalComponent;
+  let fixture: ComponentFixture<MinimalComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -14,7 +14,7 @@ describe('JsonPlaceholderTypingComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(JsonPlaceholderTypingComponent);
+    fixture = TestBed.createComponent(MinimalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges(false);
   });
