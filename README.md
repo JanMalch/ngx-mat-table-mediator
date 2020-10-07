@@ -1,3 +1,5 @@
+**Project is currently not maintained. If there is interest, development can be resumed. Improvements to the API would be made.**
+
 # ngx-mat-table-mediator <a href="https://material.angular.io/components/table/overview"><img src="https://angular.io/generated/images/marketing/concept-icons/material.svg" width="90" height="90" align="right"></a>
 
 [![Docs](https://img.shields.io/badge/docs-available-blue)][docs-url]
